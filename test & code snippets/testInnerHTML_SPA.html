@@ -1,0 +1,37 @@
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<script>
+    $(document).ready(function () {
+        // when page1Link link is clicked, page1 shows,
+        // page2 hides
+        $(page1Link).bind("click", function () {
+            $(page1).show();
+            $(page2).hide();
+        });
+
+        // when page2Link link is clicked, page2 shows,
+        // page1 hides
+        $(page2Link).bind("click", function () {
+            $(page1).hide();
+            $(page2).show();
+        });
+    });
+</script>
+
+<body>
+    <ul>
+        <!-- href='#' is needed only to help the links look like links -->
+        <li><a id="page1Link" href="#">choose page1</a></li>
+        <li><a id="page2Link" href="#">choose page2</a></li>
+    </ul>
+
+    <!-- page 2 message colored in blue -->
+    <!-- in the beginning page2 is not visible (display set to 'none') -->
+    <p id="page2" style="font-size:40px;color:blue;display:none">This is page 2</p>
+
+    <!-- page 1 message colored in red -->
+    <p id="page1" style="font-size:40px;color:red">This is page 1</p>
+
+</body>
