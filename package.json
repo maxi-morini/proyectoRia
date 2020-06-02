@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/maxi-morini/proyectoRia/issues"
   },
-  "homepage": "https://github.com/maxi-morini/proyectoRia#readme"
+  "homepage": "https://github.com/maxi-morini/proyectoRia#readme",
+  "dependencies": {
+    "react": "^16.13.1"
+  }
 }
