@@ -1,18 +1,19 @@
 import React from 'react';
 import './App.css';
-
+//
+import Home from './components/Home/Home.js';
+import LogInHTML from './components/LogIn/LogIn.js';
 
 class App extends React.Component {
-  
-  render() {
 
+	render() {
+		return (
+			<div className="App">
+				<span>App</span>
+				<LogInHTML />
+				<Home />
+			</div>
+        );
+	}
 
-    return (
-        <span>test</span>
-    );
-    
-  }
-
-}
-
-export default App;
+} export default App;
