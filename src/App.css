@@ -1,0 +1,64 @@
+/*
+@font-face{
+    font-family: 'Comic Sans MS';
+    src : url(http://allfont.ru/cache/fonts/comic-sans-ms_53a8778a817839ef2dbc5dc94ce14334.ttf);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr 1fr 2fr 2fr;    
+}
+.bloque{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+.columna{
+    display: flex;
+    flex-flow: column wrap;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+input[type = text], input[type=password] {
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+form div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:700px) and (orientation:landscape){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;  
+    }
+
+}
+*/
