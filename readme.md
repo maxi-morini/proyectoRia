@@ -18,3 +18,7 @@ serve
 	es posible levantar las cosas compiladas en build (lo que iria en produccion)
 	instalar serve globalmente: npm install -g serve
 	"serve -s build" ó "cd en /build" -> "serve -s"
+	
+	
+para que ande el servidor precisas instalarle el express el morgan lo puse para ver en consola despues lo sacaremos le das
+npm i express morgan
