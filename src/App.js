@@ -21,10 +21,12 @@ class App extends React.Component {
 			this.setState({ pagina: 'home', route });
 		} else if (route === 'LogIn') {
 			this.setState({ pagina: 'login', route });
+		}else{
+			this.setState({ pagina: 'home', route });
 		}
 	}
 
-	render() {
+	 render() {
 		let currentComponent;
 
 		switch (this.state.route) {
@@ -48,6 +50,7 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				{currentComponent}
+				<h1>prueba</h1>
 			</div>
 		);
 	}
