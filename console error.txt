@@ -1,1 +1,0 @@
-We are aware of the problem, but it is only an issue with browsers being unable to load a sourcemap that is not bundled with the axe extension and does not affect the functionality of the extension.

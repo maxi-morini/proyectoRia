@@ -7,9 +7,9 @@ import LogIn from './LogIn'
 const Routes = () => {
     return (
         <div>
-            
                 <Route exact path="/" component={Home}/>
-                <Route exact path="/jugar" component={Jugar}/>
+                {/* <Route exact path="/jugar" component={Jugar}/> */}
+                <Route exact path="/jugar" render={(props)=>(<Jugar {...props} isAuthed={true} text={"pe►arl"}/>)}/>
                 <Route exact path="/login" component={LogIn}/>
                 {/* 
                 <Route exact path="/registrar" component={LogInRegistro}/>

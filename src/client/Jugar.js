@@ -5,8 +5,8 @@ export default class Jugar extends Component {
     render() {
         return (
             <div>
-                <Titulo text={"GameQuiz de juego"}/>
-                <h1>Aca se jugaria</h1>
+                <Titulo text={this.props.text}/>
+                <h1>Aca se jria</h1>
             </div>
         )
     }
