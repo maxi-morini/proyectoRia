@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Titulo from './Titulo'
 import { BrowserRouter, Route, Switch, Link, withRouter} from 'react-router-dom';
-//import LogInHTML from 'login.html';
+import LogInRegistro from './LoginRegistro';
 
 class LogIn extends React.Component {
 	constructor(props){
@@ -17,9 +17,8 @@ class LogIn extends React.Component {
 		const url = "/api/jugadores";
 		const response = await fetch(url);
 		const data= await response.json();
-		this.setState({jugadores : data});		
+		this.setState({jugadores : data});
 	}
-
 	
 
 	onSubmit = (e)=>{        
@@ -75,6 +74,7 @@ class LogIn extends React.Component {
             <br/>
 			<input  type="submit" onClick={this.onClick} value="Ingresar"/>
         	</form>
+			<Link to="/registrar">Registrarse</Link>
 			</Fragment>
 		);
 	}

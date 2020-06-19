@@ -12,11 +12,16 @@ router.get('/api/jugadores', (req, res)=>{
 
 router.get('/api/juegos', (req, res)=>{  
     res.json(
-        juegos
+        jugadores
     );
 });
-router.post('/', async (req, res)=>{
-    console.log(req.body);
+router.post('/api/jugadores', (req, res)=>{
+    const {user,pass,logiName,fnac} = req.body;    
+    const id = jugadores.length + 1;
+    const newJugador = {...req.body, id};
+    console.log(newJugador);
+    jugadores.push(newJugador);    
+    res.json(jugadores);
 });
 
 module.exports = router;
