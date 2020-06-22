@@ -7,6 +7,7 @@ class LogIn extends React.Component {
 	constructor(props){
 		super(props);
 		this.state={"user":'',
+					"logiName":'',
 					"pass":'',
 					"jugadores":'',
 					"validado":false
@@ -24,35 +25,42 @@ class LogIn extends React.Component {
 	onSubmit = (e)=>{        
 		e.preventDefault();
 		 if(this.state.validado){
-			this.props.history.push("/")
+			this.props.history.push(`/panel:${this.state.user}`)
 		}
     }
-    onchange = e=>{        
+    onchange = e=>{     
+		let form = document.getElementById("in");
+		let coso = document.getElementById("hijo");
+		if(coso!== null){
+			form.removeChild(coso);
+		}   
         this.setState({
             [e.target.name] : e.target.value
 	})
 	}	
 	onClick = e =>{
 		let form = document.getElementById("in");
-		let coso = document.getElementById("hijo");
-		if(coso!== null){
-			form.removeChild(coso);
-		}
 		const data = this.state.jugadores;
-		for( let i = 0; i <data.length; i++){
-			const name = data[i].logiName;
-			if(name===this.state.user){
-				if(data[i].pass!==this.state.pass){
-					const node = document.createElement("h1");
-					const text = document.createTextNode("Pass incorrecto");
-					node.setAttribute("id","hijo")
-					node.appendChild(text);
-					form.appendChild(node);
-				}else{
-					this.setState({validado : true});
-					
-				}
-			}
+		let i = 0;
+		while ((i <data.length)&& (this.state.logiName != data[i].logiName)){
+			i++;
+		}
+		if (i <data.length) {
+			if(data[i].pass!==this.state.pass){
+				const node = document.createElement("h1");
+				const text = document.createTextNode("Pass incorrecto");
+				node.setAttribute("id","hijo")
+				node.appendChild(text);
+				form.appendChild(node);
+			}else{
+				this.setState({validado : true,
+								user: data[i].user});}}
+		else{
+			const node = document.createElement("h1");
+			const text = document.createTextNode("Login name incorrecto");
+			node.setAttribute("id","hijo")
+			node.appendChild(text);
+			form.appendChild(node);
 		}
 	}
 
@@ -62,10 +70,10 @@ class LogIn extends React.Component {
 			<Titulo text={"GameQuiz"}/>
 			<form id="in" onSubmit={this.onSubmit} >
             <input type="text"
-            name="user" 
-            placeholder="Usuario" 
+            name="logiName" 
+            placeholder="Login Name" 
             onChange={this.onchange} 
-            value ={this.state.user}/><br></br>
+            value ={this.state.logiName}/><br></br>
 			<input   type="password" 
 			placeholder="Constraseña"
             name="pass" 

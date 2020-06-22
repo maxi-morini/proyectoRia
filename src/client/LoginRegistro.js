@@ -9,10 +9,21 @@ class LogInRegistro extends React.Component {
 		this.state={"user":'',
 					"pass":'',
 					"lnam":'',
-					"fnac":''
+					"fnac":'',
+					"usuarios":''
+	};
+	};
+	async componentDidMount(){
+		const url = "/api/jugadores";
+		const response = await fetch(url);
+		const data= await response.json();
+		const usr = [];
+		for(let i =0; i<data.length;i++){
+			usr[i] = data[i].user;
+		}
+		this.setState({jugadores : usr});
+	}
 
-	};
-	};
 	onchange = e=>{        
         this.setState({
             [e.target.name] : e.target.value
@@ -31,20 +42,40 @@ class LogInRegistro extends React.Component {
 			}}).then(res => res.json())
 			.catch(error => console.error('Error:', error))
 			.then(response => console.log('Success:', response));
-		this.props.history.push("/");
-	}
-
+		this.props.history.push(`/panel:${this.state.user}`)}
+	
+		
+	userControl = e =>{
+		const tope = this.state.jugadores.length;
+		const jugadores = this.state.jugadores;
+		const usr = this.state.user;
+		let form = document.getElementById("padre");
+		let noti = document.getElementById("hijo");
+		if(noti!== null){
+			form.removeChild(noti);
+		};
+		for(let i =0; i<tope;i++){
+			if(jugadores[i] ==usr ){
+				let form = document.getElementById("padre");
+				const node = document.createElement("h1");
+				const text = document.createTextNode("Pass incorrecto");
+				node.setAttribute("id","hijo")
+				node.appendChild(text);
+				form.appendChild(node);				
+			}
+		}
+	}	
 
 	render() {
 		return (
 			<Fragment>
 			<Titulo text={"GameQuiz"}/>
-            <form onSubmit={this.handler}>
+            <form id="padre"onSubmit={this.handler}>
                 <input type="text" name="user" placeholder="Nombre" onChange={this.onchange}/>
                 <input type="date" name="fnac"placeholder="Fecha de nacimiento" onChange={this.onchange}/>
                 <input type="text" name="lnam"placeholder="Login Name" onChange={this.onchange}/>
                 <input type="pasword" name="pass"placeholder="Password" onChange={this.onchange}/>
-                <input type="submit" value="Ingresar" />
+                <input type="submit" value="Ingresar" onClick={this.userControl} />
             </form>
 			</Fragment>
 		);

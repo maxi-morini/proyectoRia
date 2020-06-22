@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Titulo from "./Titulo"
-import { Link } from 'react-router-dom';
+import { Link , withRouter} from 'react-router-dom';
 class Home extends React.Component {
 
 	constructor(props){
@@ -20,4 +20,4 @@ class Home extends React.Component {
 		);
 	}
 
-} export default Home;
+} export default withRouter(Home);
