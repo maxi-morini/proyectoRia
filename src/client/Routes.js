@@ -5,6 +5,7 @@ import Jugar from './Jugar'
 import LogIn from './LogIn'
 import LogInRegistro from './LoginRegistro'
 import Panel from './Panel'
+import Crear from './Crear'
 
 const Routes = () => {
     return (
@@ -13,7 +14,7 @@ const Routes = () => {
                 {/* <Route exact path="/jugar" component={Jugar}/> */}
                 <Route exact path="/jugar" render={(props)=>(<Jugar {...props} isAuthed={true} text={"pe►arl"}/>)}/>
                 <Route exact path="/login" component={LogIn}/>
-               
+                <Route exact path="/crear" component={Crear}/>
                 <Route exact path="/registrar" component={LogInRegistro}/>
                 <Route  path="/panel:usr" component={Panel}/>
                 
