@@ -6,18 +6,18 @@ import LogIn from './LogIn'
 import LogInRegistro from './LoginRegistro'
 import Panel from './Panel'
 import Crear from './Crear'
-
+import Iniciar from './Jugar/Iniciar'
 const Routes = () => {
     return (
         <div>
                 <Route exact path="/" component={Home}/>
                 {/* <Route exact path="/jugar" component={Jugar}/> */}
-                <Route exact path="/jugar" render={(props)=>(<Jugar {...props} isAuthed={true} text={"pe►arl"}/>)}/>
+                <Route exact path="/jugar" render={(props)=>(<Jugar {...props} isAuthed={true} text={"GameQuiz (Jugador)"}/>)}/>
                 <Route exact path="/login" component={LogIn}/>
                 <Route exact path="/crear" component={Crear}/>
                 <Route exact path="/registrar" component={LogInRegistro}/>
                 <Route  path="/panel:usr" component={Panel}/>
-                
+                <Route  path="/iniciar:nombre" component={Iniciar}/>
                 {/*  <Route exact path="/juegos" component={Juegos}/> */}
         </div>
     )

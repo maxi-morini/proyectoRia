@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-
-export default class Cards extends Component {
+import Card from './Card'
+export default class Cards extends Component {   
     render() {
+        const {juegos} = this.props;
         return (
             <div>
-                muchos
+                {juegos.map(juego=><Card juego={juego} key={juego.Nombre} mod={this.props.mod}/>)}
             </div>
         )
     }

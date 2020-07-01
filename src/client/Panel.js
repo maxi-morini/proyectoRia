@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { Link, withRouter } from 'react-router-dom';
 import Titulo from './Titulo';
 import Estadisticas from './Estadisticas';
+import Cards from './Cards';
 
 class Panel extends Component {
 
@@ -11,7 +12,7 @@ class Panel extends Component {
                     "pass":'',
                     "lnam":'',
                     "fnac":'',
-                    "juegos":'',
+                    "juegos":[],
                     "jugadores":''
     };};
 
@@ -43,6 +44,23 @@ class Panel extends Component {
         });
     }
 
+    mod=(nombre, est)=>{
+        const url = '/api/juegos';
+        const data = { "Nombre": nombre, "Estado": est};
+        fetch(url, {
+            method: 'PUT', 
+            body: JSON.stringify(data), 
+            headers:{
+            'Content-Type': 'application/json'
+        }
+        }).then(res => res.json())
+
+        
+            // .catch(error => console.error('Error:', error))
+            // .then(response => console.log('llegue', response));
+        
+    }
+
     render() {
         return (
             <Fragment>
@@ -57,11 +75,11 @@ class Panel extends Component {
                 <Link to="/crear">Crear</Link>
             </div>
             <div>
-                
+                <Cards juegos={this.state.juegos} mod={this.mod}/>
             </div>
             </Fragment>
             
         )
     }
 }
-export default withRouter(Panel);
+export default Panel;
