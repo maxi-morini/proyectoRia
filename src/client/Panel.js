@@ -47,6 +47,8 @@ class Panel extends Component {
     mod=(nombre, est)=>{
         const url = '/api/juegos';
         const data = { "Nombre": nombre, "Estado": est};
+        console.log(nombre,est);
+        
         fetch(url, {
             method: 'PUT', 
             body: JSON.stringify(data), 
@@ -55,10 +57,6 @@ class Panel extends Component {
         }
         }).then(res => res.json())
 
-        
-            // .catch(error => console.error('Error:', error))
-            // .then(response => console.log('llegue', response));
-        
     }
 
     render() {

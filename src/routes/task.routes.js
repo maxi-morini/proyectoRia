@@ -25,10 +25,13 @@ router.put('/api/juegos',(req,res)=>{
     const{Nombre, Estado} = req.body;
     _.each(juegos, (juego , i)=>{
         if(juego.Nombre==Nombre){
-            if(Estado == 'activa'){
-            juego.Estado = "desactiva";
+            if(Estado == "Activar"){
+                console.log(juego.Estado);
+                
+            juego.Estado = "Desactivar";
+            console.log(juego.Estado);
             }else{
-                juego.Estado='activa'
+                juego.Estado="Activar"
             }
         }
     });

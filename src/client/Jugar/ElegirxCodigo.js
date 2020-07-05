@@ -9,7 +9,6 @@ export default class FormElegir extends Component {
             <div>
                 <input type="text" onChange={this.onChange} placeholder="Join game (link)"/>
                 <input type ="password" placeholder="Password"/>
-                <input type="text" placeholder="Filtro"/>
             </div>
         )
     }

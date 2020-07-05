@@ -13,6 +13,9 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    }
+    },
+    node:{
+        net: 'empty',
+    },
 
 };
