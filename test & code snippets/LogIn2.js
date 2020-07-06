@@ -12,6 +12,9 @@ class LogIn extends React.Component {
 		this.onClick4 = this.onClick4.bind(this); // cosas de ES6..
 	}
 	
+
+	// test push 
+	
 	state = { value: ''}
 
 	onClick1() {
