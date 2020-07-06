@@ -12,11 +12,11 @@ class Home extends React.Component {
 	render() {
 		
 		return (
-			<Fragment>
-			<Titulo text={this.state.text}/>
-            <Link to="/jugar">Jugar</Link><br/>
-			<Link to="/login">Login</Link>
-			</Fragment>
+			<div className="columna">
+				<Titulo text={this.state.text}/>
+            	<Link to="/jugar"  className="bloque">Jugar</Link>
+				<Link to="/login"  className="bloque">Crear Juego</Link>
+			</div>
 		);
 	}
 

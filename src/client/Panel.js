@@ -39,7 +39,7 @@ class Panel extends Component {
         while(data2[i].user!=user){
             i++;
         }
-        this.setState({lnam:data2[i].loginame,
+        this.setState({lnam:data2[i].logiName,
                         jugadores:data2.length
         });
     }
@@ -61,21 +61,21 @@ class Panel extends Component {
 
     render() {
         return (
-            <Fragment>
-            <div>
+            <div className="columna">
                 <Titulo text={"GameQuiz"}/>
-            </div>
-            <div>
-                <Estadisticas name={this.state.user} loginame={this.state.lnam} 
+                <div style={{alignSelf:"flex-end"}}>
+                    <Link to="/crear" className="bloque-auto">Crear</Link>
+                </div>
+                    <div className="contenedor">   
+                    <div style={{alignSelf:"flex-start"}}>
+                    <Estadisticas name={this.state.user} loginame={this.state.lnam} 
                         juegos={this.state.juegos} jugadores={this.state.jugadores}/>
+                </div>
+                <div style={{alignSelf:"flex-end"}}>
+                        <Cards juegos={this.state.juegos} mod={this.mod}/>
+                </div>
+                </div>
             </div>
-            <div>
-                <Link to="/crear">Crear</Link>
-            </div>
-            <div>
-                <Cards juegos={this.state.juegos} mod={this.mod}/>
-            </div>
-            </Fragment>
             
         )
     }

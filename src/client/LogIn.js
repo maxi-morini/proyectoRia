@@ -66,7 +66,7 @@ class LogIn extends React.Component {
 
 	render() {
 		return (
-			<Fragment>
+			<div className="columna">
 			<Titulo text={"GameQuiz"}/>
 			<form id="in" onSubmit={this.onSubmit} >
             <input type="text"
@@ -82,8 +82,8 @@ class LogIn extends React.Component {
             <br/>
 			<input  type="submit" onClick={this.onClick} value="Ingresar"/>
         	</form>
-			<Link to="/registrar">Registrarse</Link>
-			</Fragment>
+			<Link to="/registrar" className="bloque">Registrarse</Link>
+			</div>
 		);
 	}
 

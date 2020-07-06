@@ -18,19 +18,17 @@ export default class Card extends Component {
     render() {
         const {juego} = this.props;
         return (
-            <div>
-                
-                <h6>{juego.Nombre} - </h6>
-                <h6>{juego.Descripcion} - </h6>
-                <h6>{juego.Preguntas} - </h6>
-                <h6>{juego.Jugadores} - </h6>
-                <h6>{juego.Creado}</h6>
-                <h6>{juego.Estado}</h6>
-                <div>
-                    <button>Editar</button>
-                    <button onClick={this.onClick}>{this.state.estado}</button>
-                </div>
-            </div>
+            <tr>
+                <th>{juego.Nombre} </th>
+                <th>{juego.Descripcion} </th>
+                <th>{juego.Preguntas} </th>
+                <th>{juego.Jugadores} </th>
+                <th>{juego.Creado}</th>
+                <th>
+                    <button type="submit">Editar</button>| 
+                    <button type="submit" onClick={this.onClick}>{this.state.estado}</button>
+                </th>
+                </tr>
         )
     }
 }

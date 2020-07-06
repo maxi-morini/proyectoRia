@@ -5,13 +5,13 @@ export default class Estadisticas extends Component {
 
     render() {
         return (
-            <div>
-                <Fragment>
-                    <Titulo text={this.props.name}/>
-                    <h3>{this.props.loginame}</h3>
-                    <h3>Creados: {this.props.juegos.length}</h3>
-                    <h3>Jugadores: {this.props.jugadores}</h3>
-                </Fragment>
+               <div>
+                <div className="bloque-auto">
+                    <h3>{this.props.name}</h3>
+                    <p>{this.props.loginame}</p>
+                    <p>Creados: {this.props.juegos.length}</p>
+                    <p>Jugadores: {this.props.jugadores}</p>
+                </div>
             </div>
         )
     }

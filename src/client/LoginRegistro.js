@@ -68,16 +68,16 @@ class LogInRegistro extends React.Component {
 
 	render() {
 		return (
-			<Fragment>
+			<div className="columna">
 			<Titulo text={"GameQuiz"}/>
             <form id="padre"onSubmit={this.handler}>
                 <input type="text" name="user" placeholder="Nombre" onChange={this.onchange}/>
                 <input type="date" name="fnac"placeholder="Fecha de nacimiento" onChange={this.onchange}/>
                 <input type="text" name="lnam"placeholder="Login Name" onChange={this.onchange}/>
-                <input type="pasword" name="pass"placeholder="Password" onChange={this.onchange}/>
+                <input type="password" name="pass"placeholder="Password" onChange={this.onchange}/>
                 <input type="submit" value="Ingresar" onClick={this.userControl} />
             </form>
-			</Fragment>
+			</div>
 		);
 	}
 

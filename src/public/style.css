@@ -1,62 +1,100 @@
-@font-face{
-    font-family: 'Comic Sans MS';
-    src : url(https://fonts.google.com/?query=comic+s);
-}
 * {
     box-sizing: border-box;
     margin: 0;
-    height: 100%;
-    width: 100%;
 }
 
 body{
     font-family: 'Comic Sans MS';
     text-align: center;
+    width: 100vw;
+    height: 100vh;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 2fr 1fr 2fr 2fr;    
-}
-.bloque{
+.contenedor{
+
     display: flex;
+    justify-content: space-around;
+    align-items: space-around;    
+}
+
+.bloque{
+    width: 33vw;
+    height: 33vh;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    box-shadow: 2px 2px black;
+}
+.bloque-auto{
     justify-content: center;
     align-items: center;
     border: 2px solid black;
     box-shadow: 2px 2px black;
 }
 .columna{
+    height: 100vh;
     display: flex;
     flex-flow: column wrap;
-    border: 2px solid black;
-    box-shadow: 2px 2px black;
+    justify-content: space-around;
+    align-items: center;   
 }
-#titulo{
+.contenedor > h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size:9vw;
 }
 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
     color: black;
+    font-size: 3vw;
+    
 }
-input[type = text], input[type=password] {
+input[type = text], input[type=submit]{
     border: 2px solid black;
+    width: 33vw;
     box-shadow: 2px 2px black;
     font-family: 'Comic Sans MS';
     text-align: center;
 }
-form div{
+input[type=password], input[type=date]{
+    border: 2px solid black;
+    width: 33vw;
+    box-shadow: 2px 2px black;
+    font-family: 'Comic Sans MS';
+    text-align: center;
+}
+input[type=submit]{
+    width: 33vw;
+    background-color: white;
+}
+
+form {
     display: flex;
-    justify-content: center;
+    flex-flow: column;
+    justify-content: space-around;
     align-items: center;
+    width: 33%;
+    height: 33%;
+}
+.estadistica{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+thead{
+    background-color: grey;
 }
 
-@media screen and (max-width:700px) and (orientation:landscape){
-    .container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;  
-    }
-
+td {
+    font-weight: lighter;
+    text-align: left;
 }
+tr:nth-child(even) {background-color: #f2f2f2;}
