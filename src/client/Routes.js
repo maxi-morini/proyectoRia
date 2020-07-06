@@ -7,6 +7,7 @@ import LogInRegistro from './LoginRegistro'
 import Panel from './Panel'
 import Crear from './Crear'
 import Iniciar from './Jugar/Iniciar'
+import Iniciado from './Jugar/Iniciado'
 const Routes = () => {
     return (
         <div>
@@ -18,7 +19,7 @@ const Routes = () => {
                 <Route exact path="/registrar" component={LogInRegistro}/>
                 <Route  path="/panel:usr" component={Panel}/>
                 <Route  path="/iniciar:nombre" component={Iniciar}/>
-                {/*  <Route exact path="/juegos" component={Juegos}/> */}
+                <Route path="/iniciado:name:nombre" component={Iniciado}/>
         </div>
     )
 }
