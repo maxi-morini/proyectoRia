@@ -66,15 +66,12 @@ class Panel extends Component {
                 <div style={{alignSelf:"flex-end"}}>
                     <Link to="/crear" className="bloque-auto">Crear</Link>
                 </div>
-                    <div className="contenedor">   
-                    <div style={{alignSelf:"flex-start"}}>
-                    <Estadisticas name={this.state.user} loginame={this.state.lnam} 
+                    
+                <Estadisticas name={this.state.user} loginame={this.state.lnam} 
                         juegos={this.state.juegos} jugadores={this.state.jugadores}/>
-                </div>
-                <div style={{alignSelf:"flex-end"}}>
-                        <Cards juegos={this.state.juegos} mod={this.mod}/>
-                </div>
-                </div>
+                
+                <Cards juegos={this.state.juegos} mod={this.mod}/>
+                
             </div>
             
         )
