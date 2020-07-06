@@ -12,7 +12,7 @@ class VideoPlayer extends React.Component {
 		return (
 			<div style={{}} >
 				{ /* <h4>{this.props.src}</h4> */}
-				<ReactPlayer url={this.props.src} playing style={{minHeight: "650px"}} />
+				<ReactPlayer url={this.props.src} playing style={{ minHeight: "650px" }} />
 			</div>
 		);
 	}
@@ -24,6 +24,15 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 		super(props);
 		this.state = { text: "Game Quiz" }
 
+		this.state = {
+			videoDataYT: {
+				videoID: "",
+				videoPrettyLink: "",
+				videoStart: "",
+				videoEnd: "",
+			}
+		}
+
 		this.state = { videoSelected: "" }
 		this.state = { videoStartSelected: "" }
 		this.state = { videoEndSelected: "" }
@@ -32,12 +41,9 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 		this.onChange = this.onChange.bind(this);
 		this.videoReload = this.videoReload.bind(this);
 
-
-
 		this.btnRemover = this.btnRemover.bind(this);
 		this.btnCancel = this.btnCancel.bind(this);
 		this.btnOK = this.btnOK.bind(this);
-
 	}
 
 	/*
@@ -59,15 +65,15 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 
 		// Retrieve Video ID
 		if (typeof pVideo == "undefined" || pVideo === "") {
-			this.setState({videoPrettyLink: ""});
-			this.setState({videoSelected: ""});
+			this.setState({ videoPrettyLink: "" });
+			this.setState({ videoSelected: "" });
 			console.log("No es un link válido a un video de YouTube.");
 			return;
 		}
 		let video_id = pVideo.split('v=')[1];
 		if (typeof video_id == "undefined") {
-			this.setState({videoPrettyLink: ""});
-			this.setState({videoSelected: ""});
+			this.setState({ videoPrettyLink: "" });
+			this.setState({ videoSelected: "" });
 			console.log("No es un link válido a un video de YouTube.");
 			return;
 		}
@@ -78,8 +84,8 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 		}
 		// una mas al final por las dudas
 		if (typeof video_id == "undefined" || video_id === "") {
-			this.setState({videoSelected: ""});
-			this.setState({videoPrettyLink: ""});
+			this.setState({ videoSelected: "" });
+			this.setState({ videoPrettyLink: "" });
 			console.log("Error al conseguir ID del Video.");
 			return;
 		}
@@ -94,9 +100,9 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 			endTime = "&end=" + pEndTime;
 		}
 		// Mayor Menor
-		if (startTime !=="" &&  endTime !=="" ) {
+		if (startTime !== "" && endTime !== "") {
 			if (pStartTime > pEndTime) {
-				console.log("Tiempo de inicio mayor al de fin: " +pStartTime +" - " +pEndTime);
+				console.log("Tiempo de inicio mayor al de fin: " + pStartTime + " - " + pEndTime);
 				startTime = "";
 				endTime = "";
 				return;
@@ -105,7 +111,8 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 
 		let pretyLink = "https://www.youtube-nocookie.com/embed/" + video_id + "?controls=2&loop=1&modestbranding=1&rel=0&showinfo=0&autoplay=1" + startTime + endTime;
 		console.log(pretyLink);
-		this.setState({videoPrettyLink: pretyLink});
+		this.setState({ videoID: video_id });
+		this.setState({ videoPrettyLink: pretyLink });
 	}
 
 	onChange = e => {
@@ -119,7 +126,7 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 
 		if (targetID === "videoSelected") {
 			pVideo = targetValue;
-		} else if (targetID=== "videoStartSelected") {
+		} else if (targetID === "videoStartSelected") {
 			pStartTime = targetValue;
 		} else if (targetID === "videoEndSelected") {
 			pEndTime = targetValue;
@@ -143,6 +150,12 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 	}
 
 	btnOK(event) {
+		let returnData = {
+			videoID: this.state.videoDataYT.videoID,
+			videoPrettyLink: this.state.videoDataYT.videoPrettyLink,
+			videoStart: this.state.videoDataYT.videoStart,
+			videoEnd: this.state.videoDataYT.videoEnd,
+		}
 		this.props.onSelectVideo(this.state.videoPrettyLink);
 	}
 
