@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import Titulo from '../Titulo'
 import Iniciado from './Iniciado';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 
 
-export default class Iniciar extends Component {
+class Iniciar extends Component {
    
     constructor(props){
         super(props);
@@ -19,7 +19,9 @@ export default class Iniciar extends Component {
     updateClock(){    
     document.getElementById('espera').innerHTML = this.state.totalTime;
     if(this.state.totalTime==0){
-        this.props.history.push(`/iniciado:${this.state.name}&${this.state.juego.Nombre}`)
+        //const concat = this.state.name.concat(":",this.state.juego.Nombre);
+        // this.props.history.push(`/iniciado:${this.state.name}:${this.state.juego.Nombre}`)
+        this.props.history.push(`/iniciado:${this.state.name}:${this.state.juego.Nombre}`);
     }else{
     const aux = this.state.totalTime - 1;    
     this.setState({totalTime: aux})
@@ -58,3 +60,4 @@ export default class Iniciar extends Component {
         )
     }
 }
+export default withRouter(Iniciar)

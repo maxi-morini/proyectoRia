@@ -18,7 +18,7 @@ export default class Card extends Component {
     render() {
         const {juego} = this.props;
         return (
-            <tr>
+                <tr>
                 <th>{juego.Nombre} </th>
                 <th>{juego.Descripcion} </th>
                 <th>{juego.Preguntas} </th>

@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import Titulo from './Titulo';
 import Estadisticas from './Estadisticas';
 import Cards from './Cards';
+import { SourceMapDevToolPlugin } from 'webpack';
 
 class Panel extends Component {
 
@@ -63,13 +64,11 @@ class Panel extends Component {
         return (
             <div className="columna">
                 <Titulo text={"GameQuiz"}/>
-                <div style={{alignSelf:"flex-end"}}>
-                    <Link to="/crear" className="bloque-auto">Crear</Link>
-                </div>
-                    
+            
+                <Link to="/crear" className="bloque-auto">Crear</Link>
+            
                 <Estadisticas name={this.state.user} loginame={this.state.lnam} 
                         juegos={this.state.juegos} jugadores={this.state.jugadores}/>
-                
                 <Cards juegos={this.state.juegos} mod={this.mod}/>
                 
             </div>

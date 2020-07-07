@@ -9,6 +9,7 @@ class Home extends React.Component {
     }
 
 
+
 	render() {
 		
 		return (
@@ -17,6 +18,7 @@ class Home extends React.Component {
             	<Link to="/jugar"  className="bloque">Jugar</Link>
 				<Link to="/login"  className="bloque">Crear Juego</Link>
 			</div>
+
 		);
 	}
 
