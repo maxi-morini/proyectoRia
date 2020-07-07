@@ -3,7 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import Titulo from './Titulo';
 import Estadisticas from './Estadisticas';
 import Cards from './Cards';
-import { SourceMapDevToolPlugin } from 'webpack';
 
 class Panel extends Component {
 
