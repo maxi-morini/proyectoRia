@@ -71,7 +71,7 @@ class QuestionThumbnailSlot extends React.Component {
 				}
 
 				{/* <img src="https://img.youtube.com/vi/{this.props.question.videoDataYT.videoID}/1.jpg" alt="" /> */}
-				<img src="https://img.youtube.com/vi/yy8aprH0ceE/1.jpg" alt=""  />
+				<img src="https://img.youtube.com/vi/yy8aprH0ceE/1.jpg" alt="" />
 				{this.props.question.tiempo}
 
 			</div>
@@ -91,24 +91,32 @@ class GameCreationSummary extends React.Component {
 	}
 
 	gameEnable() {
+		/*
+		//e.preventDefault();
+		const url = "/api/juegos";
+		const data = { juego: this.state.juego };
+		//console.log(data)
+		//console.log(JSON.stringify(data))
+		console.log(JSON.parse(data))
 
+		fetch(url, {
+			method: 'POST',
+			body: data, // JSON.stringify(data),
+			headers: {
+				'Content-Type': 'application/json'
+			}
+		}).then(res => res.json())
+			.catch(error => console.error('gameEnable: Error:', error))
+			.then(response => console.log('gameEnable: Success:', response));
+			*/
+		//this.props.history.push(`/panel:${this.state.user}`)
+
+
+		//	/ api / juegos
 	}
 
 	/*
-		titulo
-		izq
-		img cover
-		cant jugados
-		cant jugadores
-		publico / privado
 
-		play
-
-		bar separation
-
-		der
-		preguntas (cant)
-			list preguntas
 	*/
 	render() {
 		//console.log(this.props);
