@@ -18,10 +18,7 @@ export default class Iniciado extends Component {
         const aux1 = juegos.slice(0, ind);
         this.setState({name :aux1});
         const aux2 = juegos.substring(ind+1);
-       while(data[i].Nombre!=aux2){
-            i++;
-        }
-        this.setState({juego:data[i]});        
+        this.setState({juego:data.filter(juego => juego.Nombre==aux2)[0]});        
     }
     render() {
         return (

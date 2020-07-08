@@ -34,12 +34,8 @@ class Iniciar extends Component {
         const url = "/api/juegos";
 		const response = await fetch(url);
         const data= await response.json();
-        let i =0;
-        const j = nombre.substring(1);
-        while(data[i].Nombre!=j){
-            i++;
-        }
-        this.setState({juego:data[i]});        
+        const nom = nombre.substring(1);
+        this.setState({juego:data.filter(juego => juego.Nombre==nom)[0]});        
     }
     onChange = e=>{
         this.setState({

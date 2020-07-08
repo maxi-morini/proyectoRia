@@ -19,7 +19,7 @@ const Routes = () => {
                 <Route exact path="/registrar" component={LogInRegistro}/>
                 <Route  path="/panel:usr" component={Panel}/>
                 <Route  path="/iniciar:nombre" component={Iniciar}/>
-                <Route path="/iniciado:name:nombre" component={Iniciado}/>
+                <Route path="/iniciado:name:juego" component={Iniciado}/>
         </div>
     )
 }
