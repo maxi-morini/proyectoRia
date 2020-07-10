@@ -25,8 +25,8 @@ export default class Card extends Component {
                 <th>{juego.Jugadores} </th>
                 <th>{juego.Creado}</th>
                 <th>
-                    <button type="submit">Editar</button>| 
-                    <button type="submit" onClick={this.onClick}>{this.state.estado}</button>
+                    <button className="button" type="submit">Editar</button>| 
+                    <button className="button" type="submit" onClick={this.onClick}>{this.state.estado}</button>
                 </th>
                 </tr>
         )

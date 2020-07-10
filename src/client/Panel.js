@@ -61,15 +61,18 @@ class Panel extends Component {
 
     render() {
         return (
-            <div className="columna">
-                <Titulo text={"GameQuiz"}/>
-            
-                <Link to="/crear" className="bloque-auto">Crear</Link>
-            
-                <Estadisticas name={this.state.user} loginame={this.state.lnam} 
-                        juegos={this.state.juegos} jugadores={this.state.jugadores}/>
+            <div>           
+            <Titulo text={"GameQuiz"}/>
+            <div  style={{display:"flex",flexFlow:"row wrap"}}>
+            <Estadisticas name={this.state.user} loginame={this.state.lnam} 
+            juegos={this.state.juegos} jugadores={this.state.jugadores}/>
+           <div style={{display:"flex",flexFlow:"column wrap",justifyContent:"space-between", alignContent:"flex-start"}}>
+                <Link to="/crear" style={{justifySelf:"flex-start",alignSelf:"flex-end", border:"2px solid black"}}>Crear</Link>
+                <div>
                 <Cards juegos={this.state.juegos} mod={this.mod}/>
-                
+                </div>
+            </div>  
+            </div>
             </div>
             
         )
