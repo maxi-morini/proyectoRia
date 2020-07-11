@@ -63,12 +63,12 @@ class Panel extends Component {
         return (
             <div>           
             <Titulo text={"GameQuiz"}/>
-            <div  style={{display:"flex",flexFlow:"row wrap"}}>
+            <div  style={{display:"flex",flexFlow:"row wrap",justifyContent:"center"}}>
             <Estadisticas name={this.state.user} loginame={this.state.lnam} 
             juegos={this.state.juegos} jugadores={this.state.jugadores}/>
            <div style={{display:"flex",flexFlow:"column wrap",justifyContent:"space-between", alignContent:"flex-start"}}>
                 <Link to="/crear" style={{justifySelf:"flex-start",alignSelf:"flex-end", border:"2px solid black"}}>Crear</Link>
-                <div>
+                <div style={{overflow:"auto"}}>
                 <Cards juegos={this.state.juegos} mod={this.mod}/>
                 </div>
             </div>  

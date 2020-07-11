@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import Titulo from '../Titulo'
 import Iniciado from './Iniciado';
 import { Route, withRouter } from 'react-router-dom';
@@ -44,15 +44,24 @@ class Iniciar extends Component {
     }
     render() {
         return (
-            <div>
+            <Fragment>
+                <div className="columna">
                 <Titulo text={"GameQuiz (Jugador)"}/>
-                {this.state.juego.Nombre}
-                {this.state.juego.Descripcion}
+                <div  style={{display:"flex", flexFlow:"row wrap", justifyContent:"flex-start", alignContent:"space-between", width:"100%"}}>
+                    <div style={{display:"flex", flexFlow:"column wrap", height:"100%", width:"50%"}}>
+                        <h1>{this.state.juego.Nombre}</h1>
+                
+                        <h3>{this.state.juego.Descripcion}</h3>
+                    </div>
+                <div style={{heigth:"100",border:"1px solid black",width:"33%", display:"flex", flexFlow:"row wrap", justifyContent:"flex-end",alignContent:"stretch"}}>Portada</div>
                 {/* {this.state.juego.Portada} */}
-                <input type="text" name="name" onChange={this.onChange} value={this.state.name}
+                </div>
+                <input style={{width:"80%",textAlign:"left"}}type="text" name="name" onChange={this.onChange} value={this.state.name}
                     placeholder="Nombre"/>
-                <button id="espera" onClick={this.updateClock.bind(this)}>Iniciar</button>
-           </div>
+                <button id="espera" className="button bloque" style={{border:"2px solid black", height:"25%",fontSize: "3vw"}}
+                     onClick={this.updateClock.bind(this)}>Iniciar</button>
+                </div>
+           </Fragment>
         )
     }
 }

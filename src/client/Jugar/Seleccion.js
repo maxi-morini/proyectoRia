@@ -10,7 +10,7 @@ export default class Seleccion extends Component {
         const {juego} = this.props;
         return (
             <div>
-                <button onClick={this.onClick}>{juego.Nombre} ({juego.Preguntas})</button>
+                <button className="button" style={{ border:"1px solid black"}}onClick={this.onClick}>{juego.Nombre} ({juego.Preguntas})</button>
             </div>
         )
     }

@@ -19,15 +19,15 @@ export default class Card extends Component {
         const {juego} = this.props;
         return (
                 <tr>
-                <th>{juego.Nombre} </th>
-                <th>{juego.Descripcion} </th>
-                <th>{juego.Preguntas} </th>
-                <th>{juego.Jugadores} </th>
-                <th>{juego.Creado}</th>
-                <th>
+                <td>{juego.Nombre} </td>
+                <td>{juego.Descripcion} </td>
+                <td>{juego.Preguntas} </td>
+                <td>{juego.Jugadores} </td>
+                <td>{juego.Creado}</td>
+                <td>
                     <button className="button" type="submit">Editar</button>| 
                     <button className="button" type="submit" onClick={this.onClick}>{this.state.estado}</button>
-                </th>
+                </td>
                 </tr>
         )
     }

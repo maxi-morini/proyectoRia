@@ -5,8 +5,8 @@ export default class Cards extends Component {
         const {juegos} = this.props;
         return (
             <div className="lista">
-                <table>
-                    <thead>
+                <table style={{flexShrink:"inherit"}}>
+                <thead>
                     <tr>
                     <th>Nombre</th>
                     <th>Descripción</th>

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component , Fragment} from 'react'
 
 export default class FormElegir extends Component {
 
@@ -19,12 +19,13 @@ export default class FormElegir extends Component {
 
     render() {
         return (
-            <div>
-                <input type="text" name="link" 
+        
+                <Fragment>
+                <input style={{width:"100%"}} type="text" name="link" 
                             placeholder="Join game (link)"/>
-                <input type ="password" name="pass" 
+                <input style={{width:"40%", alignSelf:"flex-end"}}type ="password" name="pass" 
                         placeholder="Password" />
-            </div>
+                </Fragment>
         )
     }
 }

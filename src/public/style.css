@@ -37,6 +37,12 @@ body{
     justify-content: space-around;
     align-items: center;   
 }
+.columna-auto{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;   
+}
 .contenedor > h1{
     display: flex;
     justify-content: center;
@@ -100,14 +106,29 @@ td {
 tr:nth-child(even) {background-color: #f2f2f2;}
 
 .lista{
-
+    display: flex;
+    flex-flow: row wrap;
+    overflow-x: auto;
 
 }
-/* @media screen and (max-width:700px) and (orientation:landscape){
-    .container{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;  
+.button {
+    background-color: #fff;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS';
+  }
+@media screen and (max-width:700px){
+    /* td:nth-child(4), td:nth-child(5) , td:nth-child(3), th:nth-child(4), th:nth-child(5) , th:nth-child(3){
+        display: none;
+    } */
+    td, th{
+        font-size: 0.5em;
     }
-
-} */
+    td > button{
+        font-size: 0.5em;
+    }
+}

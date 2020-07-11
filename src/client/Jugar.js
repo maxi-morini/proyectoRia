@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component ,Fragment} from 'react'
 import Titulo from './Titulo'
 import ElegirxCodigo from './Jugar/ElegirxCodigo'
 import ElegirxSeleccion from './Jugar/ElegirxSeleccion';
@@ -31,12 +31,15 @@ class Jugar extends Component {
 
     render() {
         return (
-            <div>
+            <Fragment>
+                <div className="columna" style={{width:"100%"}}>
                 <Titulo text={this.props.text}/>
+                
                 <ElegirxCodigo juegos={this.state.juegos}/>
                 <ElegirxSeleccion juegos={this.state.juegos} elegido={this.elegido}/>
-                <button onClick={this.onClick}>Iniciar</button>
-            </div>
+                <button className="bloque-auto" style={{width:"33%", alignSelf:"flex-end"}} onClick={this.onClick}>Iniciar</button>
+                </div>
+            </Fragment>
         )
     }
 }

@@ -18,7 +18,8 @@ module.exports = {
 		]
 	},
 	node: {
-		net: 'empty',
+		net: "empty",
+		fs: "empty",
 	},
 
 };
