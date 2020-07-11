@@ -16,6 +16,14 @@ router.get('/api/juegos', (req, res)=>{
         juegos
     );
 });
+
+router.post('/api/juegos', (req, res)=>{
+	juegos.push(req.body); 
+    res.json(
+        juegos
+    );
+});
+
 router.post('/api/jugadores', (req, res)=>{
     const {user,pass,logiName,fnac} = req.body;
     jugadores.push(req.body);    
