@@ -91,24 +91,30 @@ class GameCreationSummary extends React.Component {
 	}
 
 	gameEnable() {
-		/*
+		
 		//e.preventDefault();
 		const url = "/api/juegos";
 		const data = { juego: this.state.juego };
-		//console.log(data)
-		//console.log(JSON.stringify(data))
-		console.log(JSON.parse(data))
+/*
+		const data = {
+			key: 0,
+			nombreJuego: "asdasd"
+		}
 
+		console.log(data)
+		console.log(JSON.stringify(data))
+		//console.log(JSON.parse(data))
+*/
 		fetch(url, {
 			method: 'POST',
-			body: data, // JSON.stringify(data),
+			body: JSON.stringify(data), ///JSON.stringify({ title: 'React POST Request Example' }), // JSON.stringify(data),
 			headers: {
 				'Content-Type': 'application/json'
 			}
 		}).then(res => res.json())
 			.catch(error => console.error('gameEnable: Error:', error))
 			.then(response => console.log('gameEnable: Success:', response));
-			*/
+			
 		//this.props.history.push(`/panel:${this.state.user}`)
 
 
