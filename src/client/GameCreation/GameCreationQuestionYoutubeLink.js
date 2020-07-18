@@ -65,15 +65,17 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 
 		// Retrieve Video ID
 		if (typeof pVideo == "undefined" || pVideo === "") {
-			this.setState({ videoPrettyLink: "" });
-			this.setState({ videoSelected: "" });
+			this.setState({ videoID: {} });
+			/*this.setState({ videoPrettyLink: "" });
+			this.setState({ videoSelected: "" });*/
 			console.log("No es un link válido a un video de YouTube.");
 			return;
 		}
 		let video_id = pVideo.split('v=')[1];
 		if (typeof video_id == "undefined") {
-			this.setState({ videoPrettyLink: "" });
-			this.setState({ videoSelected: "" });
+			this.setState({ videoID: {} });
+			/*this.setState({ videoPrettyLink: "" });
+			this.setState({ videoSelected: "" });*/
 			console.log("No es un link válido a un video de YouTube.");
 			return;
 		}
@@ -84,8 +86,9 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 		}
 		// una mas al final por las dudas
 		if (typeof video_id == "undefined" || video_id === "") {
-			this.setState({ videoSelected: "" });
-			this.setState({ videoPrettyLink: "" });
+			this.setState({ videoID: {} });
+			/*this.setState({ videoSelected: "" });
+			this.setState({ videoPrettyLink: "" });*/
 			console.log("Error al conseguir ID del Video.");
 			return;
 		}
@@ -109,10 +112,17 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 			}
 		}
 
-		let pretyLink = "https://www.youtube-nocookie.com/embed/" + video_id + "?controls=2&loop=1&modestbranding=1&rel=0&showinfo=0&autoplay=1" + startTime + endTime;
+		let prettyLink = "https://www.youtube-nocookie.com/embed/" + video_id + "?controls=2&loop=1&modestbranding=1&rel=0&showinfo=0&autoplay=1" + startTime + endTime;
+		//this.setState({ videoID: video_id });
+
+		let returnData = {
+			videoID: video_id,
+			videoPrettyLink: prettyLink,
+			videoStart: pStartTime,
+			videoEnd: pEndTime,
+		}
+		this.setState({ videoDataYT: returnData });
 		console.log(pretyLink);
-		this.setState({ videoID: video_id });
-		this.setState({ videoPrettyLink: pretyLink });
 	}
 
 	onChange = e => {
@@ -150,13 +160,16 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 	}
 
 	btnOK(event) {
+		/*
 		let returnData = {
 			videoID: this.state.videoDataYT.videoID,
 			videoPrettyLink: this.state.videoDataYT.videoPrettyLink,
 			videoStart: this.state.videoDataYT.videoStart,
 			videoEnd: this.state.videoDataYT.videoEnd,
-		}
-		this.props.onSelectVideo(this.state.videoPrettyLink);
+		}*/
+
+		//this.props.onSelectVideo(this.state.videoPrettyLink);
+		this.props.onSelectVideo(this.state.videoDataYT);
 	}
 
 	render() {
