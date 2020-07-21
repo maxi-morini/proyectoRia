@@ -5,7 +5,7 @@ import Jugar from './Jugar'
 import LogIn from './LogIn'
 import LogInRegistro from './LoginRegistro'
 import Panel from './Panel'
-import GameCreation from './GameCreation/GameCreation.js'
+import GameCreation from './GameCreation/GameCreation/GameCreation.js'
 import Iniciar from './Jugar/Iniciar'
 import Iniciado from './Jugar/Iniciado'
 const Routes = () => {
