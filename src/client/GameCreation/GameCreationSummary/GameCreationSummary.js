@@ -2,8 +2,6 @@ import React from 'react';
 import QuestionThumbnailSlot from "../../QuestionThumbnail/QuestionThumbnailSlot.js"
 import './GameCreationSummary.css';
 
-import Titulo from '../../Titulo.js';
-
 const testPropsJuego =
 {
 	"key": 0,
@@ -126,11 +124,11 @@ class GameCreationSummary extends React.Component {
 
 
 	render() {
+
+		//this.state.juego = testPropsJuego;
+
 		return (
 			<div className='GameCreationSummary'>
-				<div className="dualPanelHeader">
-					<Titulo text={"GameQuiz"} />
-				</div>
 				<div className="dualPanelHeaderSubtitle">
 					<h3 className="GameCreationSummarySubtitle">Resumen de Creación</h3>
 				</div>
