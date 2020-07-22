@@ -1,7 +1,7 @@
 import React from 'react';
 import './QuestionThumbnailSquare.css';
 
-
+/*
 const testPropsQuestion = {
 	"show": false,
 	"selectedAnswers": "quiz",
@@ -25,35 +25,53 @@ const testPropsQuestion = {
 	},
 	"puntos": "21",
 	"key": 1
-}
-
+}*/
+/*
+		this.setState({
+			videoDataYT: {
+				videoID: video_id,
+				videoLink: "https://www.youtube.com/watch?v=" + video_id,
+				videoPrettyLink: prettyLink,
+				videoStart: pStartTime,
+				videoEnd: pEndTime,
+				videoThumbnailBig: "https://img.youtube.com/vi/" + video_id + "/0.jpg",
+				videoThumbnailSmall: "https://img.youtube.com/vi/" + video_id + "/1.jpg",
+			}
+		});
+*/
 
 class QuestionThumbnailSquare extends React.Component {
 
 	constructor(props) {
 		super(props);
+
+		/*this.state = {
+			varQuestion: this.props.question
+		};*/
+
 	}
 
 	render() {
-		/*
-		let varIndex = this.props.index;
-		let varQuestion = this.props.question;
-		*/
-
+		
+		//let varIndex = this.props.index;
+		//let varQuestion = this.props.question;
+		//console.log(varQuestion);
+		//console.log(varQuestion.selectedVideo);
+/*
 		let varIndex = 0;
 		let varQuestion = testPropsQuestion;
-
+*/
 
 		let someJSX = (
 			<div className='questionThumbnailSquare' >
 
 					<div >
 						<div className="questionThumbnailSquareImage" >
-							<img className="questionThumbnailSquareImage" src={"https://img.youtube.com/vi/" + varQuestion.selectedVideo.videoID + "/0.jpg"} alt="" />
+							<img className="questionThumbnailSquareImage" src={"https://img.youtube.com/vi/" + this.props.question.selectedVideo.videoID + "/0.jpg"} alt="" />
 						</div>
 						<div className="questionThumbnailSquareFoot" >
-							<span className="questionThumbnailSquareText" >{varQuestion.tiempo}s</span>
-							<span className="questionThumbnailSquareText" >{varQuestion.selectedAnswers}</span>
+							<span className="questionThumbnailSquareText" >{this.props.question.tiempo}s</span>
+							<span className="questionThumbnailSquareText" >{this.props.question.selectedAnswers}</span>
 						</div>
 					</div>
 			</div>
