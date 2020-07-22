@@ -1,0 +1,124 @@
+/*
+	GameCreation.css
+*/
+
+.gameCreation {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+/*
+	Upper Area: 'gameCreationHeader', "gameCreationNombre", "gameCreationSettings"
+*/
+
+.gameCreationHeader {
+	width: 100%;
+	/*display: flex;*/
+	background-color: lightblue;
+	text-align: left;
+	/*margin-bottom: 1vh;
+	padding-left: 3vw;*/
+}
+
+/*.gameCreationNombre {}*/
+
+.gameCreationSettings {
+	/*margin-left: 1%;*/
+}
+
+/* Left Area: gameCreationLeftPanel, gameCreationSpanSubtitle, gameCreationLeftPanelListQuestion
+QuestionThumbnailSquare, gameCreationMarginTop, gameCreationLeftPanelListNew, gameCreationNewQuestionButton
+*/
+
+.gameCreationLeftPanel {
+	max-width: 33vw;
+	/*padding-left: 3rem;*/
+	/*width: 20%;*/
+	display: flex;
+	flex-direction: column;
+	background-color: red;
+	/*float: left;*/
+}
+/*
+.gameCreationSpanSubtitle{
+	display: block;
+}*/
+
+.gameCreationLeftPanelListQuestion {
+	/*width: 12em;*/
+	/*max-height: 75vh;*/
+	/*display: flex;*/
+	/*flex-direction: column;*/
+	align-items: center;
+	overflow-y: auto;
+	/**/
+	background-color: yellow;
+	text-align: center;
+	/*min-height: 16em;*/
+}
+
+/*.gameCreationLeftPanelListNew {}*/
+
+/*.gameCreationNewQuestionButton {}*/
+
+
+/*
+	Right Area: 
+*/
+.gameCreationRightPanelContainer {
+	width: 66vw;
+	/*min-width: 70em;*/
+	background-color: #194D33;
+	float: right;
+}
+
+.gameCreationFooter {
+	padding-left: 3rem;
+	display: flex;
+	flex-direction: row-reverse;
+	width: 100%;
+	text-align: right;
+	min-height: 1em;
+	background-color: blue;
+	float: right;
+}
+
+/*.gameCreationTerminar {}*/
+
+/*.gameCreationSettingsContainer {}*/
+
+/*.gameCreationModalSection {}*/
+
+
+/*
+.gameCreationMarginTop {
+	width: 1em;
+	height: 1em
+}
+
+.gameCreationMarginBottom {
+	width: 1em;
+	height: 1em
+}
+
+.gameCreationMarginRightBlock {
+	width: 3em;
+	height: 1em;
+}
+.gameCreationMarginUp {
+	width: 1em;
+	height: 1em
+}
+
+
+.gameCreationLeftPanelList {
+	background-color: yellow;
+	text-align: center;
+	min-height: 16em;
+}
+
+
+
+*/

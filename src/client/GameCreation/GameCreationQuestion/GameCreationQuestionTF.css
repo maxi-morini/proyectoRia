@@ -1,0 +1,11 @@
+/*
+	GameCreationQuestionTF.css
+	Usa algunos estilos de GameCreationQuestionQuiz.css
+*/
+
+.gameCreationQuestionTFOptions{
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+}

@@ -1,0 +1,167 @@
+/*
+	GameCreationQuestion.css
+*/
+
+.gameCreationQuestion {
+	width: 100%;
+}
+
+.gameCreationQuestionMain {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.gameCreationQuestionHeader {
+	width: 100%;
+}
+
+.gameCreationQuestionHeader input {
+	width: 70%;
+	margin-bottom: 1rem;
+	/*padding-left: 1rem;*/
+}
+
+.gameCreationQuestionLeft {
+	border: 1px solid blue;
+	width: 25%;
+	/*float: left;*/
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/*max-width: 9em;*/
+	/*min-width: 100px;*/
+	/*text-align: right;*/
+	/*height: 22vh;*/
+	/*min-height: 15vh;*/
+	min-height: 9rem;
+	max-height: 20vh;
+	/*
+	*/
+}
+
+/*.gameCreationQuestionLeftTop{}*/
+
+.gameCreationQuestionLeftTopItem {
+	text-align: left;
+}
+
+.gameCreationQuestionLeftTop input {
+	width: 100%;
+}
+
+.gameCreationQuestionLeftBottom {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.gameCreationQuestionLeftBottomItem {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.gameCreationQuestionLeftBottom label {
+	/*display: inline-block*/
+}
+
+/*
+input.gameCreationQuestionLeftBottom {
+	<input type=radio id=quiz name=quiz onChange={this.answersQuiz} checked={this.state.selectedAnswers === quiz}
+}*/
+
+.gameCreationQuestionRight {
+	border: 1px solid red;
+	width: 75%;
+	/*float: right;*/
+	/*min-width: 29em;*/
+	/*min-height: 8em;*/
+	/*max-width: 28em;*/
+	/*text-align: center*/
+}
+
+.gameCreationQuestionImageArea {
+	display: flex;
+	flex-direction: column;
+	/*width: 14em;*/
+	/*height: 8em;*/
+	background-color: green;
+	text-align: center
+}
+
+.rightQuestionRightImagen {
+	/*min-width: 8em;*/
+	/*min-height: 8em;*/
+	background-color: green;
+	text-align: center
+}
+
+.rightQuestionRightImagenImg {
+	width: 100%;
+	/*min-width: 8em;*/
+	/*min-height: 8em;*/
+	max-height: 30%;
+
+}
+
+.rightQuestionRightImagenNo {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.gameCreationQuestionUpload {
+	/*float: left*/
+}
+
+/*
+button.gameCreationQuestionUpload {
+	<button type=button>Upload</button>
+}*/
+
+.gameCreationQuestionLink {}
+
+/*
+button. gameCreationQuestionLink{
+	<button type=button>Link</button>
+}
+*/
+
+.gameCreationQuestionAnswersArea {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	/*display: inline-block*/
+}
+
+/*
+
+<div className='gameCreationQuestionAnswersArea' style={{ display: inline-block }}>
+							{answerType === 'quiz' ? (
+								<Quiz childFatherConnPanel={this.handleQuestion} posibleAnswers={this.posibleAnswers} />
+							) : answerType === 'truefalse' ? (
+								<TrueFalse childFatherConnPanel={this.handleQuestion} posibleAnswers={this.posibleAnswers} />
+							) : null}
+*/
+
+.gameCreationQuestionFoot {
+	width: 100%;
+	/*text-align: center*/
+}
+
+/*
+button.gameCreationQuestionFoot {
+	<button type=button>Agregar</button>
+}*/
+
+/*
+.gameCreationQuestionContainerYTLink {
+
+}
+*/

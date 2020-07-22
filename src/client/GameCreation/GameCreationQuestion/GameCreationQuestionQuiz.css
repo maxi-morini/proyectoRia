@@ -1,0 +1,48 @@
+/*
+	GameCreationQuestionQuiz.css
+*/
+
+.gameCreationQuestion {
+	width: 100%;
+}
+
+.gameCreationQuestionSubtitle {
+	width: 100%;
+}
+
+.gameCreationQuestionQuizOptions {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.gameCreationQuestionQuizOptionsRow {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.gameCreationQuestionQuizOptionsItem {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 50%;
+	min-width: 220px;
+	padding: 0.9rem;
+	align-items: center;
+}
+
+.gameCreationQuestionQuizOptionsItem input[type="text"] {
+	width: 100%;
+	/*background-color: red;*/
+	min-width: 120px;
+}
+
+.gameCreationQuestionQuizOptionsItem label{
+	margin-right: 0.9rem;
+	width: 12px;
+}
+
+

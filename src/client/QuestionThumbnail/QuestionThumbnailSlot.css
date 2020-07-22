@@ -1,0 +1,55 @@
+/*
+	QuestionThumbnailSlot.css
+*/
+:root {
+	--thumbnailWidth: 120px;
+	--thumbnailHeight: 90px;
+}
+
+.questionThumbnailSlot {
+	border: 1px solid red;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 100%;
+	flex-grow: 0;
+	text-align: center;
+	min-width: calc( var(--thumbnailWidth) * 2);
+	padding-bottom: 1vh;
+}
+
+.questionThumbnailSlotText {
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: calc(100% - var(--thumbnailWidth) - 0.5rem);
+	min-width: calc( var(--thumbnailWidth) * 2); /* ref en media query */
+}
+
+.nonImage {
+	border: 1px solid blue;
+	text-align: left;
+}
+
+/*questionThumbnailSlotText*/
+/*.questionThumbnailSlotIndexAndAns {}*/
+
+/*questionThumbnailSlotText*/
+/*.questionThumbnailSlotQuestion {}*/
+
+/*questionThumbnailSlotText*/
+/*.questionThumbnailSlotTime {}*/
+
+.questionThumbnailSlotImage {
+	border: 1px solid green;
+	display: flex;
+	align-self: center;
+}
+
+/*questionThumbnailSlotImage*/
+.questionThumbnailSlotImageSmol {
+	width: var(--thumbnailWidth);
+	height: var(--thumbnailHeight);
+}

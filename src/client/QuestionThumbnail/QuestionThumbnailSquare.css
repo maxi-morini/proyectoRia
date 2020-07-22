@@ -1,0 +1,51 @@
+/*
+	QuestionThumbnailSquare.css
+*/
+
+:root {
+	--thumbnailWidthMin: 120px;
+	--thumbnailHeightMin: 90px;
+	--thumbnailWidthMax: 480px;
+	--thumbnailHeightMax: 360px;
+	--aspectRatio: 0.75;
+}
+
+.questionThumbnailSquare {
+	border: 1px solid red;
+	width: 100%;
+}
+
+.questionThumbnailSquareImage {
+	width: 100%;
+}
+
+.questionThumbnailSquareFoot {
+	display: flex;
+	justify-content: space-between;
+}
+/*
+.questionThumbnailSquareText {
+	background-color: rgb(red, green, blue, 0.5);
+}
+*/
+
+
+
+
+
+/*
+.questionThumbnailSquare {
+	background-color: #c27939;
+	padding-top: 100%;
+	position: relative;
+}
+.questionThumbnailSquareContainer{
+	border: 1px solid blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	<div className='questionThumbnailSquareContainer' >
+}*/

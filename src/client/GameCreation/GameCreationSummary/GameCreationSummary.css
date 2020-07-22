@@ -1,0 +1,131 @@
+/*
+	GameCreationSummary.css
+*/
+
+:root {
+	--gameCoverMinWidth: 204px;
+	--gameCoverMinHeight: 204px;
+	--dualPanelAreaRightWidth: 69vw;
+}
+
+.GameCreationSummary {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.GameCreationSummarySubtitle {
+	text-align: left;
+	/*padding-bottom: 1rem;*/
+	font-size: 1.9rem;
+}
+
+.dualPanelContainer {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.dualPanelAreaRight {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	border: 1px solid red;
+	min-width: calc(var(--gameCoverMinWidth) + 4vw);
+	width: calc(100vw - var(--gameCoverMinWidth) - 4vw);
+	padding-top: 0rem;
+	padding-bottom: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.dualPanelAreaLeft {
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	border: 1px solid blue;
+	border-right: 2px solid black;
+	min-height: 300px;
+	width: calc(var(--gameCoverMinWidth) + 4vw);
+	max-height: 50vh;
+}
+
+.questionCover {
+	max-width: var(--gameCoverMinWidth);
+	max-height: 180px;
+	min-width: 120px;
+	min-width: 90px;
+	border: 1px solid black;
+}
+
+.dualPanelAreaRightTitle {
+	text-align: left;
+	margin-left: 5vw;
+	/*padding-bottom: 1rem;*/
+}
+
+@media only screen and (max-width: calc(612px + 34px)) {
+	.dualPanelAreaRight {
+		width: 100vw;
+	}
+	.dualPanelAreaLeft {
+		justify-content: stretch;
+		min-height: 0px;
+	}
+	h3.GameCreationSummarySubtitle {
+		padding: 0px;
+	}
+	/*
+	.questionCover {	
+		min-height: 0px;
+		border: 1px solid black;
+	}*/
+}
+
+@media only screen and (max-width: 646px) {
+	.GameCreationSummarySubtitle {
+		font-size: 1.20rem;
+	}
+}
+
+@media only screen and (max-width: calc(360px + 5px + 1rem + 1rem)) {
+	.GameCreationSummary {
+		flex-direction: column;
+	}
+	.GameCreationSummarySpan {
+		font-size: 0.8rem;
+	}
+	.nonImage {
+		font-size: 0.8rem;
+	}
+	.GameCreationSummarySubtitle {
+		/*font-size: 7vw;*/
+		font-size: 0.99rem;
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+	}
+	.dualPanelAreaLeft {
+		padding: 0;
+		width: 100%;
+		min-width: 0px;
+	}
+	.dualPanelAreaRight {
+		min-width: 0;
+		padding: 0;
+		width: 100%;
+	}
+	.questionThumbnailSlot {
+		min-width: 60px;
+		width: 100%;
+	}
+	.questionThumbnailSlotImageSmol {
+		display: none;
+		width: 100%;
+	}
+	.questionThumbnailSlotText {
+		min-width: 60px;
+		width: 100%;
+	}
+}

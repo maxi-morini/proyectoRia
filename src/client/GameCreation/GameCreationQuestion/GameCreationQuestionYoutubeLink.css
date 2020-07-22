@@ -1,0 +1,91 @@
+/*
+	GameCreationQuestionYoutubeLink.css
+*/
+
+.gameCreationQuestionYoutubeLink {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+/*.gameCreationQuestionYoutubeLink{}*/
+
+.gameCreationQuestionYoutubeLinkSubtitle {
+	width: 100%;
+}
+
+.areaLeft {
+	border: 1px solid blue;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	min-width: 157px;
+	/*max-width: 250px;*/
+	width: 30%;
+	/*text-align: left;*/
+}
+
+.gameCreationQuestionYoutubeLinkVideoSelected{
+	border: 1px solid green;
+	width: 100%;
+	text-align: left;
+}
+.gameCreationQuestionYoutubeLinkVideoSelected label{
+	padding-left: 1rem;
+}
+.gameCreationQuestionYoutubeLinkVideoSelected input[type='text']{
+	width: 100%;
+}
+
+
+.videoTimeSelectionContainer {
+	border: 1px solid black;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+.videoTimeSelectionContainer label{
+	text-align: right;
+	width: 90px;
+}
+.videoTimeSelectionContainer input[type='text']{
+	text-align: right;
+	width: 4rem;
+}
+
+.areaRight {
+	width: 60%;
+}
+
+.videoPlayerWrapper {
+	border: 4px solid red;
+	width: 100%;
+}
+
+.videoPlayerWrapper div{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+
+}
+.videoPlayerWrapper div div{
+	width: 100% !important;
+	height: 100% !important;
+}
+
+/*.remove {}*/
+
+.remove input[type='button'] {
+	min-width: 100px
+}
+
+#btnCancel {
+	min-width: 100px
+}
+
+#btnOK {
+	min-width: 100px
+}
