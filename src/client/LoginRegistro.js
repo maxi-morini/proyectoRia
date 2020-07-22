@@ -40,8 +40,6 @@ class LogInRegistro extends React.Component {
 			headers:{
 			  'Content-Type': 'application/json'
 			}}).then(res => res.json())
-			.catch(error => console.error('Error:', error))
-			.then(response => console.log('Success:', response));
 		this.props.history.push(`/panel:${this.state.user}`)}
 	
 		
@@ -55,10 +53,11 @@ class LogInRegistro extends React.Component {
 			form.removeChild(noti);
 		};
 		for(let i =0; i<tope;i++){
-			if(jugadores[i] ==usr ){
+			if(jugadores[i] === usr ){
+				e.preventDefault();
 				let form = document.getElementById("padre");
 				const node = document.createElement("h1");
-				const text = document.createTextNode("Pass incorrecto");
+				const text = document.createTextNode("Usuario en uso");
 				node.setAttribute("id","hijo")
 				node.appendChild(text);
 				form.appendChild(node);				

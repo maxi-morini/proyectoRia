@@ -37,7 +37,7 @@ class Jugar extends Component {
                 
                 <ElegirxCodigo juegos={this.state.juegos}/>
                 <ElegirxSeleccion juegos={this.state.juegos} elegido={this.elegido}/>
-                <button className="bloque-auto" style={{width:"33%", alignSelf:"flex-end"}} onClick={this.onClick}>Iniciar</button>
+                <button className="button bloque-auto" style={{border:"2px solid black",width:"33%", alignSelf:"flex-end"}} onClick={this.onClick}>Iniciar</button>
                 </div>
             </Fragment>
         )
