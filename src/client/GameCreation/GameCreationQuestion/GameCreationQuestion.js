@@ -1,5 +1,5 @@
 import React from 'react';
-import GameCreationQuestionYoutubeLink from '../GameCreationQuestionYoutubeLink.js';
+import GameCreationQuestionYoutubeLink from './GameCreationQuestionYoutubeLink.js';
 //import './Modal.css';
 import './GameCreationQuestion.css';
 import GameCreationQuestionQuiz from './GameCreationQuestionQuiz.js';
@@ -56,18 +56,17 @@ class GameCreationQuestion extends React.Component {
 					videoID: "",
 					videoPrettyLink: "",
 					videoStart: "",
-					videoEnd: "",
-
+					videoEnd: ""
 				},
 				puntos: "",
 				key: 0
 			}
 		};
-
+		/*
 		this.state = {
 			show: false,
 			question: testPropsQuestion
-		};
+		};*/
 
 		// Control de Modal para el video
 		this.showModal = this.showModal.bind(this);
@@ -96,8 +95,7 @@ class GameCreationQuestion extends React.Component {
 	}
 
 	agregarPregunta() {
-		//console.log(this.state);
-		this.props.childFatherConn(this.state);
+		this.props.childFatherConn(this.state.question);
 	}
 
 	showModal = () => {

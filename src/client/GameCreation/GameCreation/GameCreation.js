@@ -1,16 +1,11 @@
 import React from 'react';
 import '../Modal.css';
 import './GameCreation.css';
-
 import GameCreationSetttings from '../GameCreationSettings.js';
 import GameCreationQuestion from '../GameCreationQuestion/GameCreationQuestion.js';
 import QuestionThumbnailSquare from '../../QuestionThumbnail/QuestionThumbnailSquare.js';
 
-//import { connect } from 'react-redux';
-//import { withRouter } from 'react-router-dom';
-//import { gameCreationSave } from '../../redux/actions/GameCreationActions'; //../
-//import { gameCreationGetAll } from '../../redux/actions/GameCreationActions';
-
+/*
 const testPropsJuego =
 {
 	"key": 0,
@@ -105,6 +100,7 @@ const testPropsJuego =
 	],
 	"directLink": "LruyZyIxqrGkqiht6eSbqYOXQU0uhJVX88k"
 }
+*/
 
 class GameCreation extends React.Component {
 
@@ -153,7 +149,9 @@ class GameCreation extends React.Component {
 			preguntas: this.state.preguntas,
 			directLink: link
 		};
-		console.log(juego);
+
+		
+		//console.log(juego);
 		//this.props.childFatherConnSettings(settings);
 
 		// Redirect to summary?
@@ -211,7 +209,7 @@ class GameCreation extends React.Component {
 					<div className='gameCreationLeftPanelListQuestion'>
 						{
 							this.state.preguntas.map((currElement, index) => (
-								<QuestionThumbnailSquare key={index} tiempo={currElement.tiempo} tiempo={currElement.tiempo} />
+								<QuestionThumbnailSquare key={index}  question={currElement} />
 							))
 						}
 					</div>

@@ -34,7 +34,8 @@
 	/*min-width: 100px;*/
 	/*text-align: right;*/
 	/*height: 22vh;*/
-	min-height: 15vh;
+	/*min-height: 15vh;*/
+	min-height: 9rem;
 	max-height: 20vh;
 	/*
 	*/
@@ -104,6 +105,7 @@ input.gameCreationQuestionLeftBottom {
 	width: 100%;
 	/*min-width: 8em;*/
 	/*min-height: 8em;*/
+	max-height: 30%;
 
 }
 
