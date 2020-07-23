@@ -146,11 +146,21 @@ class GameCreation extends React.Component {
 			key: 0,
 			nombreJuego: this.state.nombreJuego,
 			settings: this.state.gameSettings,
-			preguntas: this.state.preguntas,
+			preguntas: this.state.preguntas.reverse(),
 			directLink: link
 		};
 
-		
+		/*
+		// para el codigo
+			this.props.history.push({
+				pathname: '/crear/resumen',
+				state: { juego: juego }
+			})
+
+		// para el codigo o ambos
+			+import { withRouter } from 'react-router-dom';
+			+withRouter
+		*/
 		//console.log(juego);
 		//this.props.childFatherConnSettings(settings);
 
@@ -181,8 +191,15 @@ class GameCreation extends React.Component {
 
 	handleQuestionCreated = (payload) => {
 		payload.key = this.state.preguntas.length + 1;
-		this.state.preguntas.push(payload)
+		//this.state.preguntas.push(payload);
+		this.state.preguntas.unshift(payload);
+		
 		this.questionCreationHide();
+
+		/*
+		var element = document.getElementById("gameCreationLeftPanel");
+		element.scrollTop = element.scrollHeight;
+		*/
 	}
 
 	handleSettingsCreated = (payload) => {
@@ -204,12 +221,12 @@ class GameCreation extends React.Component {
 					<button className="gameCreationSettings" type="button" onClick={this.gameSettingsShow}  >Settings</button>
 				</div>
 
-				<div className='gameCreationLeftPanel'  >
+				<div className='gameCreationLeftPanel' id="gameCreationLeftPanel" >
 					<span className='gameCreationSpanSubtitle' >Tablero de Preguntas</span>
 					<div className='gameCreationLeftPanelListQuestion'>
 						{
 							this.state.preguntas.map((currElement, index) => (
-								<QuestionThumbnailSquare key={index}  question={currElement} />
+								<QuestionThumbnailSquare key={index} question={currElement} />
 							))
 						}
 					</div>
