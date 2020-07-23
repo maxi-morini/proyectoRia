@@ -13,6 +13,7 @@ export default class Iniciado extends Component {
                     time:10,
                     stop: false
                 }
+        this.stop = this.stop.bind(this);
     };
     async componentDidMount(){
         const  juegos =  this.props.match.params.juego;       
@@ -29,7 +30,10 @@ export default class Iniciado extends Component {
 
     }
     
-
+    stop = () =>{       
+        this.setState({stop:true});
+    }
+    
     render() {
         return (
             <Fragment>
@@ -39,8 +43,8 @@ export default class Iniciado extends Component {
                 <div style={{height:"25vh"}}>
                 <Preguntas isQuiz={false}/>
                 </div>
-                <Tiempo time={this.state.time}/>
-                <BtnSiguiente/>
+                <Tiempo time={this.state.time} stop={this.state.stop}/>
+                <BtnSiguiente stop={this.stop}/>
             </Fragment>
         )
     }
