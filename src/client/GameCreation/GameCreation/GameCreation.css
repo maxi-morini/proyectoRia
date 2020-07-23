@@ -33,13 +33,15 @@ QuestionThumbnailSquare, gameCreationMarginTop, gameCreationLeftPanelListNew, ga
 */
 
 .gameCreationLeftPanel {
-	max-width: 33vw;
+	max-width: 25vw;
 	/*padding-left: 3rem;*/
 	/*width: 20%;*/
 	display: flex;
 	flex-direction: column;
 	background-color: red;
 	/*float: left;*/
+	overflow-y: auto;
+	max-height: 50vh;
 }
 /*
 .gameCreationSpanSubtitle{
@@ -91,34 +93,3 @@ QuestionThumbnailSquare, gameCreationMarginTop, gameCreationLeftPanelListNew, ga
 
 /*.gameCreationModalSection {}*/
 
-
-/*
-.gameCreationMarginTop {
-	width: 1em;
-	height: 1em
-}
-
-.gameCreationMarginBottom {
-	width: 1em;
-	height: 1em
-}
-
-.gameCreationMarginRightBlock {
-	width: 3em;
-	height: 1em;
-}
-.gameCreationMarginUp {
-	width: 1em;
-	height: 1em
-}
-
-
-.gameCreationLeftPanelList {
-	background-color: yellow;
-	text-align: center;
-	min-height: 16em;
-}
-
-
-
-*/
