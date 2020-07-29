@@ -1,0 +1,50 @@
+/*
+	GameCreationSettings.css
+*/
+
+.gameCreationSettingsConf{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+}
+
+.gameCreationSettingsConfRadios{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+
+}
+
+.gameCreationSettingsConfRadio{
+	display: flex;
+
+}
+
+#password{
+	display: flex;
+	width: 100%;
+}
+.gameCreationSettingsIMG{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.gameCreationSettingsAudio{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+#imgURL{
+	width: 100%;
+}
+
+#imgURLdisplay{
+	width: 100%;
+	/*min-width: 150px;*/
+}

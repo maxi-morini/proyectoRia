@@ -10,6 +10,10 @@
 
 /*.gameCreationQuestionYoutubeLink{}*/
 
+.gameCreationQuestionContainerYTLink {
+	resize: both;
+}
+
 .gameCreationQuestionYoutubeLinkSubtitle {
 	width: 100%;
 }
@@ -26,18 +30,19 @@
 	/*text-align: left;*/
 }
 
-.gameCreationQuestionYoutubeLinkVideoSelected{
+.gameCreationQuestionYoutubeLinkVideoSelected {
 	border: 1px solid green;
 	width: 100%;
 	text-align: left;
 }
-.gameCreationQuestionYoutubeLinkVideoSelected label{
+
+.gameCreationQuestionYoutubeLinkVideoSelected label {
 	padding-left: 1rem;
 }
-.gameCreationQuestionYoutubeLinkVideoSelected input[type='text']{
+
+.gameCreationQuestionYoutubeLinkVideoSelected input[type='text'] {
 	width: 100%;
 }
-
 
 .videoTimeSelectionContainer {
 	border: 1px solid black;
@@ -46,17 +51,20 @@
 	flex-wrap: nowrap;
 	justify-content: center;
 }
-.videoTimeSelectionContainer label{
+
+.videoTimeSelectionContainer label {
 	text-align: right;
 	width: 90px;
 }
-.videoTimeSelectionContainer input[type='text']{
+
+.videoTimeSelectionContainer input[type='text'] {
 	text-align: right;
 	width: 4rem;
 }
 
 .areaRight {
 	width: 60%;
+	min-width: 157px;
 }
 
 .videoPlayerWrapper {
@@ -64,14 +72,14 @@
 	width: 100%;
 }
 
-.videoPlayerWrapper div{
+.videoPlayerWrapper div {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
-
 }
-.videoPlayerWrapper div div{
+
+.videoPlayerWrapper div div {
 	width: 100% !important;
 	height: 100% !important;
 }

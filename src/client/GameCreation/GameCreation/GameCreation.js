@@ -1,7 +1,8 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import '../Modal.css';
 import './GameCreation.css';
-import GameCreationSetttings from '../GameCreationSettings.js';
+import GameCreationSetttings from './GameCreationSettings.js';
 import GameCreationQuestion from '../GameCreationQuestion/GameCreationQuestion.js';
 import QuestionThumbnailSquare from '../../QuestionThumbnail/QuestionThumbnailSquare.js';
 
@@ -109,11 +110,20 @@ class GameCreation extends React.Component {
 		this.state = { text: "Game Quiz" };
 
 		// Game Creation Data
+		/*
 		this.state = { nombreJuego: "" };
 		this.state = { gameSettings: {} }
 		this.state = { gameSettingsShow: false }
 		this.state = { questionCreationShow: false };
 		this.state = { preguntas: [] }; // no declarar states abajo de esto que se muere el mapeo
+		*/
+		this.state = {
+			nombreJuego: "",
+			gameSettings: {},
+			gameSettingsShow: false,
+			questionCreationShow: false,
+			preguntas: new Array()
+		};
 
 		//Onchanges - Game Creation Data
 		this.nombreJuegoOnChange = this.nombreJuegoOnChange.bind(this); // cosas de ES6..
@@ -141,30 +151,30 @@ class GameCreation extends React.Component {
 	}
 
 	terminarOnClick(event) {
+		let preguntasLength = this.state.preguntas.length;
+		//payload.key = this.state.preguntas.length + 1;
+
 		let link = this.makeID(35);
-		let juego = {
+		let juego2 = {
+			Creado: "20/08/2019",
+			Descripcion: this.state.gameSettings.descripcion,
+			Estado: "Activar",
+			Jugadores: 0,
+			Nombre: this.state.nombreJuego,
+			Preguntas: preguntasLength,
+			user: "Unknow",
 			key: 0,
-			nombreJuego: this.state.nombreJuego,
 			settings: this.state.gameSettings,
-			preguntas: this.state.preguntas.reverse(),
+			preguntasArr: this.state.preguntas.reverse(),
 			directLink: link
 		};
 
-		/*
-		// para el codigo
-			this.props.history.push({
-				pathname: '/crear/resumen',
-				state: { juego: juego }
-			})
-
-		// para el codigo o ambos
-			+import { withRouter } from 'react-router-dom';
-			+withRouter
-		*/
 		//console.log(juego);
-		//this.props.childFatherConnSettings(settings);
 
-		// Redirect to summary?
+		this.props.history.push({
+			pathname: '/crear/resumen',
+			state: { juego: juego2 }
+		})
 
 		/* // Cosas Redux 
 		let state = this.props.gameCreationSave(this.state.nombreJuego);
@@ -258,4 +268,4 @@ class GameCreation extends React.Component {
 		);
 	}
 }
-export default GameCreation;
+export default withRouter(GameCreation);

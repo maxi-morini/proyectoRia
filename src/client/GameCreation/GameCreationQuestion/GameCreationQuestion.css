@@ -42,6 +42,10 @@
 }
 
 /*.gameCreationQuestionLeftTop{}*/
+.gameCreationSettingsContainer{
+	resize: both;
+}
+
 
 .gameCreationQuestionLeftTopItem {
 	text-align: left;
