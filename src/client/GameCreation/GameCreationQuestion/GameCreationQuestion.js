@@ -216,9 +216,10 @@ class GameCreationQuestion extends React.Component {
 								<img className="rightQuestionRightImagenImg" src={"https://img.youtube.com/vi/" + this.state.question.selectedVideo.videoID + "/0.jpg"} alt="" />
 							</div>
 							<div className='rightQuestionRightImagenNo' >
-								<div className='gameCreationQuestionUpload'>
+								{/*<div className='gameCreationQuestionUpload'>
 									<button type="button">Upload</button>
 								</div>
+								*/}
 								<div className='gameCreationQuestionLink' onClick={this.showModal} >
 									<button type="button">Link</button>
 								</div>

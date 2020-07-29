@@ -71,7 +71,7 @@ const testPropsJuego =
 				videoStart: "",
 				videoEnd: "",
 
-			},"puntos": "5",
+			}, "puntos": "5",
 			"key": 2
 		},
 		{
@@ -100,11 +100,38 @@ const testPropsJuego =
 class GameCreationSummary extends React.Component {
 
 	constructor(props) {
+
 		super(props);
-		this.state = { text: "Game Quiz" }
-		this.state.juego = testPropsJuego;
+
+		this.state = {
+			juego: this.props.history.location.state.juego
+		};
+
+		/*this.state = {
+			juego: {}
+		};*/
+		/*this.state.juego = {
+			key: 0,
+			nombreJuego: "",
+			settings: {
+			},
+			preguntas: [
+				{
+				},
+			],
+			directLink: "LruyZyIxqrGkqiht6eSbqYOXQU0uhJVX88k"
+		}*/
+		this.componentDidMount = this.componentDidMount.bind(this);
+		
+		//console.log(this.state);
+		//console.log(this.props.history.location.state.juego);
+		//this.state.juego = testPropsJuego;
+		//this.state.juego = this.props.juego;
 
 		this.gameEnable = this.gameEnable.bind(this);
+	}
+
+	componentDidMount() {
 	}
 
 	gameEnable() {
@@ -122,7 +149,6 @@ class GameCreationSummary extends React.Component {
 			.then(response => console.log('gameEnable: Success:', response));
 	}
 
-
 	render() {
 
 		//this.state.juego = testPropsJuego;
@@ -135,7 +161,7 @@ class GameCreationSummary extends React.Component {
 				<div className="dualPanelContainer" >
 					<div className="dualPanelAreaLeft"  >
 						<div className="dualPanelAreaLeftCover">
-							<img className="questionCover" src={this.state.juego.settings.cover} alt="" />
+							<img className="questionCover" src={this.state.juego.settings.coverImage} alt="" />
 						</div>
 						<h3 className="GameCreationSummarySubtitle" >{this.state.juego.nombreJuego}</h3>
 						{
@@ -149,10 +175,10 @@ class GameCreationSummary extends React.Component {
 					</div>
 					<div className="dualPanelAreaRight" >
 						<div className="dualPanelAreaRightTitle">
-							<h3 className="GameCreationSummarySubtitle">Preguntas ({this.state.juego.preguntas.length})</h3>
+							<h3 className="GameCreationSummarySubtitle">Preguntas ({this.state.juego.Preguntas.length})</h3>
 						</div>
 						{
-							this.state.juego.preguntas.map((currElement, index) => (
+							this.state.juego.preguntasArr.map((currElement, index) => (
 								<QuestionThumbnailSlot key={index} index={index} question={currElement} />
 							))
 						}

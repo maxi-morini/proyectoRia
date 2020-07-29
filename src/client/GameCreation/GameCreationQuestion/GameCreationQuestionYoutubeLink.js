@@ -19,12 +19,17 @@ class VideoPlayer extends React.Component {
 	*/
 	constructor(props) {
 		super(props);
+
+		/*this.state = {
+			playingVideo :true
+		};*/
+		//this.myRefAudioControl = React.createRef();
 	}
 
 	render() {
 		return (
 			<div >
-				<ReactPlayer url={this.props.src} playing />
+				<ReactPlayer url={this.props.src} playing={this.props.playing} />
 			</div>
 		);
 	}
@@ -45,8 +50,10 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 				videoEnd: "",
 				videoThumbnailBig: "",
 				videoThumbnailSmall: ""
-			}
+			},
+			playingVideo: true
 		}
+
 		/*
 		this.state = {
 			videoDataYT: testPropsYT
@@ -65,7 +72,7 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 	}
 
 	componentDidMount() {
-		console.log(this.state.videoDataYT);
+		//console.log(this.state.videoDataYT);
 		this.videoReload("", "", "");
 	}
 
@@ -79,7 +86,8 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 				videoEnd: "",
 				videoThumbnailBig: "",
 				videoThumbnailSmall: ""
-			}
+			},
+			playingVideo : false
 		});
 	}
 
@@ -154,8 +162,10 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 				videoEnd: pEndTime,
 				videoThumbnailBig: "https://img.youtube.com/vi/" + video_id + "/0.jpg",
 				videoThumbnailSmall: "https://img.youtube.com/vi/" + video_id + "/1.jpg",
-			}
+			},
+			playingVideo: true
 		});
+
 	}
 
 	onChange = e => {
@@ -179,7 +189,8 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 			videoDataYT: {
 				...prevState.videoDataYT,
 				[targetID]: targetValue
-			}
+			},
+			playingVideo: false
 		}))
 
 		this.videoReload(pVideo, pStartTime, pEndTime);
@@ -196,18 +207,35 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 				videoEnd: "",
 				videoThumbnailBig: "",
 				videoThumbnailSmall: ""
-			}
+			},
+			playingVideo: false
 		});
 
 	}
 
 	btnCancel(event) {
 		// 		:(
+
+		this.setState(prevState => ({
+			videoDataYT: {
+				...prevState.videoDataYT
+			},
+			playingVideo: false
+		}))
+
 		this.props.onSelectVideo("");
 	}
 
 	btnOK(event) {
 		//console.log(this.state.videoDataYT);
+
+		this.setState(prevState => ({
+			videoDataYT: {
+				...prevState.videoDataYT
+			},
+			playingVideo: false
+		}))
+
 		this.props.onSelectVideo(this.state.videoDataYT);
 	}
 
@@ -239,7 +267,7 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 
 				<div className="areaRight" >
 					<div className="videoPlayerWrapper" >
-						<VideoPlayer src={this.state.videoDataYT.videoPrettyLink} />
+						<VideoPlayer src={this.state.videoDataYT.videoPrettyLink} playing={this.state.playingVideo} />
 					</div>
 					<div className="remove">
 						<input type="button" value="Remover" id="btnRemove" onClick={this.btnRemover} />
