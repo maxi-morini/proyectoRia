@@ -3,6 +3,7 @@ import Titulo from '../Titulo'
 import Tiempo from './Tiempo';
 import BtnSiguiente from './BtnSiguiente';
 import Preguntas from './Preguntas';
+import PuntuacionParcial from './PuntuacionParcial';
 
 export default class Iniciado extends Component {
 
@@ -11,7 +12,8 @@ export default class Iniciado extends Component {
         this.state={juego:'',
                     name:'',
                     time:10,
-                    stop: false
+                    stop: false,
+                    respuestas:[25,25,25,25]
                 }
         this.stop = this.stop.bind(this);
     };
@@ -41,10 +43,11 @@ export default class Iniciado extends Component {
                 <h1>{this.state.name}</h1>
                 <h1>{this.state.juego.Nombre}</h1>
                 <div style={{height:"25vh"}}>
-                <Preguntas isQuiz={false}/>
+                <Preguntas isQuiz={true}/>
                 </div>
                 <Tiempo time={this.state.time} stop={this.state.stop}/>
                 <BtnSiguiente stop={this.stop}/>
+                <PuntuacionParcial isQuiz={false} respuestas={this.state.respuestas }/>
             </Fragment>
         )
     }
