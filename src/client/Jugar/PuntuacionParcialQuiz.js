@@ -21,12 +21,7 @@ componentDidMount(){
     ctx.font = 'Comic Sans MS';
     ctx.fillStyle = 'white';
     const txt1 = 'A - Respuesta 1';
-    const ancho1 = ctx.measureText(txt1).width;
-    console.log(ancho1);
-    console.log("sssdd");
-    console.log(w/5);
-    
-    
+    const ancho1 = ctx.measureText(txt1).width;    
     const x1 = ((w/5)-ancho1)/2;
     ctx.fillText( txt1, x1 , h-(alto1/2),x1);
     ctx.shadowColor = 'black';

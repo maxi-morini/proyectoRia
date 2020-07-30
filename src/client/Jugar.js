@@ -32,7 +32,7 @@ class Jugar extends Component {
     render() {
         return (
             <Fragment>
-                <div className="columna" style={{width:"100%"}}>
+                <div className="columna" style={{width:"100%", height:"100vh"}}>
                 <Titulo text={this.props.text}/>
                 
                 <ElegirxCodigo juegos={this.state.juegos}/>

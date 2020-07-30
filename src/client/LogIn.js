@@ -66,7 +66,7 @@ class LogIn extends React.Component {
 
 	render() {
 		return (
-			<div className="columna">
+			<div className="columna" style={{height:"100vh"}}>
 			<Titulo text={"GameQuiz"}/>
 			<form id="in" onSubmit={this.onSubmit} >
             <input type="text"

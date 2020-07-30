@@ -45,7 +45,7 @@ class Iniciar extends Component {
     render() {
         return (
             <Fragment>
-                <div className="columna">
+                <div className="columna" style={{height:"100vh"}}>
                 <Titulo text={"GameQuiz (Jugador)"}/>
                 <div  style={{display:"flex", flexFlow:"row wrap", justifyContent:"flex-start", alignContent:"space-between", width:"100%"}}>
                     <div style={{display:"flex", flexFlow:"column wrap", height:"100%", width:"50%"}}>

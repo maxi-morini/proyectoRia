@@ -4,6 +4,7 @@ const router = express.Router();
 
 const jugadores = require('../../ejemplo/jugadores.json');
 const juegos = require('../../ejemplo/juegos.json');
+const puntajes = require('../../ejemplo/puntajes.json');
 
 router.get('/api/jugadores', (req, res)=>{  
     res.json(
@@ -34,10 +35,7 @@ router.put('/api/juegos',(req,res)=>{
     _.each(juegos, (juego , i)=>{
         if(juego.Nombre==Nombre){
             if(Estado == "Activar"){
-                console.log(juego.Estado);
-                
             juego.Estado = "Desactivar";
-            console.log(juego.Estado);
             }else{
                 juego.Estado="Activar"
             }
@@ -46,4 +44,17 @@ router.put('/api/juegos',(req,res)=>{
     res.json(juegos);
 });
 
+router.get('/api/puntajes',(req,res)=>{
+    console.log("entra");
+    res.json(
+        puntajes
+    );
+});
+
+router.post('/api/puntajes',(req,res)=>{
+    puntajes.push(req.body); 
+    res.json(
+        puntajes
+    );
+});
 module.exports = router;

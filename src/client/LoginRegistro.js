@@ -67,7 +67,7 @@ class LogInRegistro extends React.Component {
 
 	render() {
 		return (
-			<div className="columna">
+			<div className="columna" style={{height:"100vh"}}>
 			<Titulo text={"GameQuiz"}/>
             <form id="padre"onSubmit={this.handler}>
                 <input type="text" name="user" placeholder="Nombre" onChange={this.onchange}/>

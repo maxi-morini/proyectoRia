@@ -13,7 +13,7 @@ class Home extends React.Component {
 	render() {
 		
 		return (
-			<div className="columna">
+			<div className="columna" style={{height:"100vh"}}>
 				<Titulo text={this.state.text}/>
             	<Link to="/jugar"  className="bloque">Jugar</Link>
 				<Link to="/login"  className="bloque">Crear Juego</Link>

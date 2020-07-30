@@ -4,7 +4,7 @@ import Tiempo from './Tiempo';
 import BtnSiguiente from './BtnSiguiente';
 import Preguntas from './Preguntas';
 import PuntuacionParcial from './PuntuacionParcial';
-
+import PuntuacionTotal from './PuntuacionTotal'
 export default class Iniciado extends Component {
 
     constructor(props){
@@ -26,7 +26,7 @@ export default class Iniciado extends Component {
         const aux1 = juegos.slice(0, ind);
         this.setState({name :aux1});
         const aux2 = juegos.substring(ind+1);
-        this.setState({juego:data.filter(juego => juego.Nombre==aux2)[0]});        
+        this.setState({juego:data.filter(juego => juego.Nombre==aux2)[0]});
     }
     sumarPuntaje(){
 
@@ -47,6 +47,8 @@ export default class Iniciado extends Component {
                 </div>
                 <Tiempo time={this.state.time} stop={this.state.stop}/>
                 <BtnSiguiente stop={this.stop}/>
+                <PuntuacionTotal nombre={"AnimalesQuiz"}/>
+                {/* <PuntuacionTotal nombre={this.state.juego.Nombre}/> */}
                 <PuntuacionParcial isQuiz={false} respuestas={this.state.respuestas }/>
             </Fragment>
         )
