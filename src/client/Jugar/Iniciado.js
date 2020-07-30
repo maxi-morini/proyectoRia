@@ -38,7 +38,7 @@ export default class Iniciado extends Component {
             <Fragment>
                 <Titulo text={"GameQuiz"}/>
                 <div style={{height:"25vh"}}>
-                <Preguntas isQuiz={true}/>
+                <Preguntas isQuiz={true} jugador={this.state.name}/>
                 </div>
                 {/* <PuntuacionTotal nombre={this.state.juego.Nombre}/> 
                 <PuntuacionParcial isQuiz={false} respuestas={this.state.respuestas }/> */}

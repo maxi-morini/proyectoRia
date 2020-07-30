@@ -10,7 +10,8 @@ export default class BtnSiguiente extends Component {
                         respuestas:    {respuestas:[25,25,25,25]},
                         pregunta:{numero:1},
                         puntaje:{vale:"100 pts."},
-                        correcta:{correcta:"A"}}} 
+                        correcta:{correcta:"A"},
+                        maspreguntas:{maspreguntas:false}}} 
                 id="boton" className="button bloque" style={{border:"2px solid black", height:"25%",fontSize: "3vw"}}
                 onClick={this.props.stop}>Siguiente</Link>
             </Fragment>

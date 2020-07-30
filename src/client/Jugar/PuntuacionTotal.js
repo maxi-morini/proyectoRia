@@ -11,14 +11,11 @@ export default class PuntuacionTotal extends Component {
 	};
 
     async componentDidMount(){
-        const  {nombreJ} = this.props.match.params;
-        const nJuego = nombreJ.substring(1);
 		const url = "/api/puntajes";
 		const response = await fetch(url);
         const data= await response.json();
-        let puntos = data.filter(puntaje => puntaje.juego == nJuego);
-        this.setState({puntajes : puntos});
-        console.log(this.state.puntajes);         
+        let puntos = data.filter(puntaje => puntaje.juego == this.props.location.juego.nombre);
+        this.setState({puntajes : puntos});         
     }
 
     render() {
@@ -27,8 +24,8 @@ export default class PuntuacionTotal extends Component {
             <div className="columna" style={{height:"100vh"}}>
                 <Titulo text={"GameQuiz"}/>
                 <div id="puntos" className="columna" style={{height:"50vh", overflowY:"scroll"}}>
-                    <table style={{flexShrink:"inherit"}}>
-                    <tbody>{puntajes.map(puntaje=>{<LineaPunto punto={puntaje}/>})}</tbody>
+                    <table id="tabla" style={{flexShrink:"inherit"}}>
+                        {this.state.puntajes.map(puntaje=><LineaPunto puntaje={puntaje}/>)}
                     </table>
                 </div>
             </div>

@@ -25,7 +25,7 @@ const Routes = () => {
                 <Route  path="/panel:usr" component={Panel}/>
                 <Route  path="/iniciar:nombre" component={Iniciar}/>
                 <Route path="/iniciado:name:juego" component={Iniciado}/>
-                <Route path="/puntaje:nombre" component={PuntuacionTotal}/>
+                <Route path="/puntaje" component={PuntuacionTotal}/>
                 <Route path="/puntacionparcial" component={PuntuacionParcial}/>
         </div>
     )

@@ -97,6 +97,9 @@ table{
     border: 2px solid black;
     border-collapse: collapse;
 }
+#tabla{
+    border:none;
+}
 thead{
     background-color: grey;
 }
