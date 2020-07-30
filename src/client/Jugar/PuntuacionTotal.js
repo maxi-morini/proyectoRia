@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Titulo from '../Titulo'
 import LineaPunto from './LineaPunto'
+import { Link } from 'react-router-dom';
 
 
 export default class PuntuacionTotal extends Component {
@@ -28,6 +29,7 @@ export default class PuntuacionTotal extends Component {
                         {this.state.puntajes.map(puntaje=><LineaPunto puntaje={puntaje}/>)}
                     </table>
                 </div>
+                <Link to="/" className="button bloque-auto" style={{border:"2px solid black",fontSize: "3vw"}}>Fin</Link>
             </div>
         )
     }

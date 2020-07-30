@@ -5,7 +5,7 @@ export default class BtnSiguiente extends Component {
     render() {
         return (
             <Fragment>
-            <Link to={{pathname: "/puntacionparcial",
+            <Link to={{pathname: "/puntuacionparcial",
                         isQuiz: {isQuiz:true,},
                         respuestas:    {respuestas:[25,25,25,25]},
                         pregunta:{numero:1},

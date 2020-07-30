@@ -26,7 +26,7 @@ const Routes = () => {
                 <Route  path="/iniciar:nombre" component={Iniciar}/>
                 <Route path="/iniciado:name:juego" component={Iniciado}/>
                 <Route path="/puntaje" component={PuntuacionTotal}/>
-                <Route path="/puntacionparcial" component={PuntuacionParcial}/>
+                <Route path="/puntuacionparcial" component={PuntuacionParcial}/>
         </div>
     )
 }

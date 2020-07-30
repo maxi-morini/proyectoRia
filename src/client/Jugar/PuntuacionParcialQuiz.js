@@ -20,7 +20,7 @@ componentDidMount(){
     ctx.strokeRect(0,h,w/5,-alto1);
     ctx.font = 'Comic Sans MS';
     ctx.fillStyle = 'white';
-    const txt1 = 'A - Respuesta 1';
+    const txt1 = 'A';
     const ancho1 = ctx.measureText(txt1).width;    
     const x1 = ((w/5)-ancho1)/2;
     ctx.fillText( txt1, x1 , h-(alto1/2),x1);
