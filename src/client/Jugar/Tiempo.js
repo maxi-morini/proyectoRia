@@ -22,6 +22,7 @@ export default class Tiempo extends Component {
     }
 
     updateClock(){
+        if(document.getElementById('tiempo')!= null){
         document.getElementById('tiempo').innerHTML= this.state.tiempo;
         if(this.state.tiempo==0){
             console.log(this.state.tiempo);
@@ -32,7 +33,10 @@ export default class Tiempo extends Component {
             const aux = this.state.tiempo - 1;    
             this.setState({tiempo: aux})
             return setTimeout(this.updateClock.bind(this),1000);
-        }       
+        }
+        } 
+              
+
     }
 
     componentDidMount(){
@@ -43,8 +47,8 @@ export default class Tiempo extends Component {
 
     render() {
         return (
-        <h3 id="tiempo" style={{display:"inline",border:"1px solid black", 
-                borderRadius:"50%",height:"33vh",width:"33vw" }}></h3>
+        <h3 id="tiempo" style={{display:"flex",border:"1px solid black", 
+                borderRadius:"50%",height:"50px",width:"50px",justifyContent:"center",alignItems:"center" }}></h3>
         )
     }
 }

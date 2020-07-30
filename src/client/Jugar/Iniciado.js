@@ -5,6 +5,7 @@ import BtnSiguiente from './BtnSiguiente';
 import Preguntas from './Preguntas';
 import PuntuacionParcial from './PuntuacionParcial';
 import PuntuacionTotal from './PuntuacionTotal'
+import { Link } from 'react-router-dom';
 export default class Iniciado extends Component {
 
     constructor(props){
@@ -15,7 +16,6 @@ export default class Iniciado extends Component {
                     stop: false,
                     respuestas:[25,25,25,25]
                 }
-        this.stop = this.stop.bind(this);
     };
     async componentDidMount(){
         const  juegos =  this.props.match.params.juego;       
@@ -32,24 +32,16 @@ export default class Iniciado extends Component {
 
     }
     
-    stop = () =>{       
-        this.setState({stop:true});
-    }
     
     render() {
         return (
             <Fragment>
                 <Titulo text={"GameQuiz"}/>
-                <h1>{this.state.name}</h1>
-                <h1>{this.state.juego.Nombre}</h1>
                 <div style={{height:"25vh"}}>
                 <Preguntas isQuiz={true}/>
                 </div>
-                <Tiempo time={this.state.time} stop={this.state.stop}/>
-                <BtnSiguiente stop={this.stop}/>
-                <PuntuacionTotal nombre={"AnimalesQuiz"}/>
-                {/* <PuntuacionTotal nombre={this.state.juego.Nombre}/> */}
-                <PuntuacionParcial isQuiz={false} respuestas={this.state.respuestas }/>
+                {/* <PuntuacionTotal nombre={this.state.juego.Nombre}/> 
+                <PuntuacionParcial isQuiz={false} respuestas={this.state.respuestas }/> */}
             </Fragment>
         )
     }

@@ -9,6 +9,8 @@ import GameCreation from './GameCreation/GameCreation/GameCreation.js'
 import Iniciar from './Jugar/Iniciar'
 import Iniciado from './Jugar/Iniciado'
 import GameCreationSummary from './GameCreation/GameCreationSummary/GameCreationSummary.js'
+import PuntuacionTotal from '../client/Jugar/PuntuacionTotal'
+import PuntuacionParcial from './Jugar/PuntuacionParcial'
 
 const Routes = () => {
     return (
@@ -23,6 +25,8 @@ const Routes = () => {
                 <Route  path="/panel:usr" component={Panel}/>
                 <Route  path="/iniciar:nombre" component={Iniciar}/>
                 <Route path="/iniciado:name:juego" component={Iniciado}/>
+                <Route path="/puntaje:nombre" component={PuntuacionTotal}/>
+                <Route path="/puntacionparcial" component={PuntuacionParcial}/>
         </div>
     )
 }

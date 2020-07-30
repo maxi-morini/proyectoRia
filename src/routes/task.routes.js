@@ -45,7 +45,6 @@ router.put('/api/juegos',(req,res)=>{
 });
 
 router.get('/api/puntajes',(req,res)=>{
-    console.log("entra");
     res.json(
         puntajes
     );

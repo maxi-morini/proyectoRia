@@ -11,10 +11,12 @@ export default class PuntuacionTotal extends Component {
 	};
 
     async componentDidMount(){
+        const  {nombreJ} = this.props.match.params;
+        const nJuego = nombreJ.substring(1);
 		const url = "/api/puntajes";
 		const response = await fetch(url);
         const data= await response.json();
-        let puntos = data.filter(puntaje => puntaje.juego == this.props.nombre);
+        let puntos = data.filter(puntaje => puntaje.juego == nJuego);
         this.setState({puntajes : puntos});
         console.log(this.state.puntajes);         
     }

@@ -49,9 +49,9 @@ class Iniciar extends Component {
                 <Titulo text={"GameQuiz (Jugador)"}/>
                 <div  style={{display:"flex", flexFlow:"row wrap", justifyContent:"flex-start", alignContent:"space-between", width:"100%"}}>
                     <div style={{display:"flex", flexFlow:"column wrap", height:"100%", width:"50%"}}>
-                        <h1>{this.state.juego.Nombre}</h1>
+                        <h1 style={{textAlign:"center"}}>{this.state.juego.Nombre}</h1>
                 
-                        <h3>{this.state.juego.Descripcion}</h3>
+                        <p>{this.state.juego.Descripcion}</p>
                     </div>
                 <div style={{heigth:"100",border:"1px solid black",width:"33%", display:"flex", flexFlow:"row wrap", justifyContent:"flex-end",alignContent:"stretch"}}>Portada</div>
                 {/* {this.state.juego.Portada} */}
