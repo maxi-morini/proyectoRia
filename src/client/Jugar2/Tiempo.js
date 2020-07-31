@@ -28,6 +28,7 @@ class Tiempo extends Component {
 		if (document.getElementById('tiempo') != null) {
 			document.getElementById('tiempo').innerHTML = this.state.tiempo;
 			if (this.state.tiempo == 0) {
+				this.props.childFatherConn("");
 				//console.log(this.state.tiempo);
 
 				/*
@@ -47,6 +48,7 @@ class Tiempo extends Component {
 			</Fragment>
 
 				*/
+				/*
 				this.props.history.push({
 					pathname: `/puntuacionparcial`, // si.. quedo pasamano
 					isQuiz: { isQuiz: true, },
@@ -57,7 +59,7 @@ class Tiempo extends Component {
 					maspreguntas: { maspreguntas: false }
 				})
 
-
+*/
 			} else if (this.props.stop && this.state.una == 0) {
 				this.setState({ una: 1 });
 				this.stop()

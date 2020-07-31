@@ -13,6 +13,7 @@ export default class Quiz extends Component {
 	}
 
 	render() {
+		console.log(this.props)
 		return (
 			<div className="contenedor" style={{ width: "100%", height: "100%" }}>
 				<div style={{ display: "flex", flexFlow: "column wrap", justifyContent: "space-between" }}>
@@ -20,19 +21,19 @@ export default class Quiz extends Component {
 
 						<button className="preguntas bloque-auto button" name="quizA" onClick={this.onClickTF}
 							style={{ background: "blue", border: "2px solid black", height: "50%", fontSize: "2vw" }}>
-							A - Respuesta 1
+							A - {this.props.posibleAnswers.options.quizAText}
            				 </button>
 						<button className="preguntas bloque-auto button" name="quizB" onClick={this.onClickTF}
 							style={{ background: "red", border: "2px solid black", height: "50%", fontSize: "2vw" }}>
-							B - Respuesta 2
+							B - {this.props.posibleAnswers.options.quizBText}
            				 </button>
 						<button className="preguntas bloque-auto button" name="quizC" onClick={this.onClickTF}
 							style={{ background: "red", border: "2px solid black", height: "50%", fontSize: "2vw" }}>
-							C - Respuesta 3
+							C - {this.props.posibleAnswers.options.quizCText}
            			 	</button>
 						<button className="preguntas bloque-auto button" name="quizD" onClick={this.onClickTF}
 							style={{ background: "red", border: "2px solid black", height: "50%", fontSize: "2vw" }}>
-							D - Respuesta 4
+							D - {this.props.posibleAnswers.options.quizDText}
             			</button>
 					</div>
 

@@ -20,7 +20,6 @@ export default class PuntuacionParcial extends Component {
 		this.onClickSiguiente = this.onClickSiguiente.bind(this);
 	}
 
-
 	QuizORTF = () => {
 		const isQuiz = this.props.location.isQuiz.isQuiz;
 		//console.log(this.props.history.location.respuestas);
@@ -47,6 +46,7 @@ export default class PuntuacionParcial extends Component {
 	//         >Terminar</Link>
 	//     }
 	// }
+	//<h1>{this.props.location.puntaje.vale}</h1>
 
 	onClickSiguiente() {
 		/*
@@ -65,7 +65,8 @@ export default class PuntuacionParcial extends Component {
 			puntaje: { vale: this.state.pregunta.puntos + " pts." },
 			correcta: { correcta: this.state.pregunta.posibleAnswers.correctAnswer },
 			maspreguntas: { maspreguntas: masPreguntas }
-		});*/
+		});
+		*/
 
 		//console.log(this.props.history.location.maspreguntas);
 
@@ -84,6 +85,7 @@ export default class PuntuacionParcial extends Component {
 					jugador: this.state.jugador // solo string con el nombre
 				}
 			});
+
 		} else {
 			//console.log("vamo a puntaje ");
 			this.props.history.push({
@@ -94,15 +96,25 @@ export default class PuntuacionParcial extends Component {
 				gameplay: this.props.history.location.gameplay
 			});
 		}
+		
 	}
 
 	render() {
+
+		//console.log(this.props);
+		//console.log(this.state);
+		var correcta = this.props.history.location.gameplay.juego.preguntasArr[this.props.history.location.gameplay.currentQuestion].posibleAnswers.correctAnswer;
+		if(this.props.location.isQuiz.isQuiz){
+			correcta = correcta.slice(-1);
+		}
+
 		return (
 			<Fragment>
 				<div style={{ height: "100vh" }}>
 					<Titulo text={"GameQuiz"} />
-					<Titulo text={"Pregunta " + this.props.location.pregunta.key} />
-					<h1>{this.props.location.puntaje.vale}</h1>
+					<Titulo text={"Pregunta " + (+this.state.currentQuestion + 1)} />
+					<h3>Puntos: {this.props.history.location.gameplay.juego.preguntasArr[this.props.history.location.gameplay.currentQuestion].puntos}</h3>
+					<h3>Correcta: {correcta}</h3>
 					<div className="contenedor" style={{ flexFlow: "row wrap", width: "90%", height: "50%" }}>
 						<this.QuizORTF />
 					</div>

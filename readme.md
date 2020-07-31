@@ -1,7 +1,7 @@
 npm init
 	crea package.json
 
-npm install --save react
+npm install --save react0
 	agrega cosas de react
 
 mientras probada agregue a mano react-dom y react-scripts
@@ -22,3 +22,9 @@ serve
 	
 para que ande el servidor precisas instalarle el express el morgan lo puse para ver en consola despues lo sacaremos le das
 npm i express morgan
+
+
+Guia de instalacion Posta
+	npm install
+	npm run webpack
+	npm run dev
