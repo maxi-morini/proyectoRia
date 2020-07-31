@@ -60,7 +60,8 @@
 			  "videoThumbnailSmall": "https://img.youtube.com/vi/-v1RcQEcofQ/1.jpg"
 			},
 			"puntos": "3",
-			"key": 1
+			"key": 1,
+			"respuestasParciales": [60, 40, 0, 0]
 		  },
 		  {
 			"selectedAnswers": "quiz",
@@ -85,7 +86,8 @@
 			  "videoThumbnailSmall": "https://img.youtube.com/vi/lCcwn6bGUtU/1.jpg"
 			},
 			"puntos": "69",
-			"key": 2
+			"key": 2,
+			"respuestasParciales": [25, 25, 10, 40]
 		  },
 		  {
 			"selectedAnswers": "quiz",
@@ -110,7 +112,8 @@
 			  "videoThumbnailSmall": "https://img.youtube.com/vi/N3bEh-PEk1g/1.jpg"
 			},
 			"puntos": "420",
-			"key": 3
+			"key": 3,
+			"respuestasParciales": [5, 20, 40, 35]
 		  }
 		],
 		"directLink": "3WjzVbUsTzkXxJm5a6LQCDwbUREV3xHg1fq"

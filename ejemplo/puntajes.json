@@ -34,5 +34,23 @@
 		"nombre": "Franky",
 		"puntaje": 300,
 		"lugar": 1
+	},
+	{
+		"juego": "SoyUnJuego",
+		"nombre": "Franky",
+		"puntaje": 6420,
+		"lugar": 1
+	},
+	{
+		"juego": "SoyUnJuego",
+		"nombre": "Otro2",
+		"puntaje": 6120,
+		"lugar": 2
+	},
+	{
+		"juego": "SoyUnJuego",
+		"nombre": "Roberto Carlos",
+		"puntaje": 777,
+		"lugar": 3
 	}
 ]

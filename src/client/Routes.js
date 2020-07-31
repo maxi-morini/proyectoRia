@@ -6,11 +6,18 @@ import LogIn from './LogIn'
 import LogInRegistro from './LoginRegistro'
 import Panel from './Panel'
 import GameCreation from './GameCreation/GameCreation/GameCreation.js'
+import GameCreationSummary from './GameCreation/GameCreationSummary/GameCreationSummary.js'
+//
+/*
 import Iniciar from './Jugar/Iniciar'
 import Iniciado from './Jugar/Iniciado'
-import GameCreationSummary from './GameCreation/GameCreationSummary/GameCreationSummary.js'
 import PuntuacionTotal from '../client/Jugar/PuntuacionTotal'
 import PuntuacionParcial from './Jugar/PuntuacionParcial'
+*/
+import Iniciar from './Jugar2/Iniciar'
+import Iniciado from './Jugar2/Iniciado'
+import PuntuacionTotal from './Jugar2/PuntuacionTotal'
+import PuntuacionParcial from './Jugar2/PuntuacionParcial'
 
 const Routes = () => {
 	return (

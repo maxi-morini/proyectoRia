@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react'
 import Titulo from './Titulo'
-import ElegirxCodigo from './Jugar/ElegirxCodigo'
-import ElegirxSeleccion from './Jugar/ElegirxSeleccion';
+import ElegirxCodigo from './Jugar2/ElegirxCodigo'
+import ElegirxSeleccion from './Jugar2/ElegirxSeleccion';
 import { withRouter } from 'react-router-dom';
-import Iniciar from './Jugar/Iniciar'
+//import Iniciar from './Jugar/Iniciar'
 
 
 class Jugar extends Component {
