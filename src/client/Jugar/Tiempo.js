@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Titulo from '../Titulo';
+import { withRouter } from 'react-router-dom';
 
+//export default class Tiempo extends Component {
+class Tiempo extends Component {
 
-export default class Tiempo extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -26,7 +28,36 @@ export default class Tiempo extends Component {
 		if (document.getElementById('tiempo') != null) {
 			document.getElementById('tiempo').innerHTML = this.state.tiempo;
 			if (this.state.tiempo == 0) {
-				console.log(this.state.tiempo);
+				//console.log(this.state.tiempo);
+
+				/*
+				  repite de BtnSiguiente:
+				  <Fragment>
+				<Link to={{
+					pathname: "/puntuacionparcial",
+					isQuiz: { isQuiz: true, },
+					respuestas: { respuestas: [25, 25, 25, 25] },
+					pregunta: { numero: 1 },
+					puntaje: { vale: "100 pts." },
+					correcta: { correcta: "A" },
+					maspreguntas: { maspreguntas: false }
+				}}
+					id="boton" className="button bloque" style={{ border: "2px solid black", height: "25%", fontSize: "3vw" }}
+					onClick={this.props.stop}>Siguiente</Link>
+			</Fragment>
+
+				*/
+				this.props.history.push({
+					pathname: `/puntuacionparcial`, // si.. quedo pasamano
+					isQuiz: { isQuiz: true, },
+					respuestas: { respuestas: [25, 25, 25, 25] },
+					pregunta: { numero: 1 },
+					puntaje: { vale: "100 pts." },
+					correcta: { correcta: "A" },
+					maspreguntas: { maspreguntas: false }
+				})
+
+
 			} else if (this.props.stop && this.state.una == 0) {
 				this.setState({ una: 1 });
 				this.stop()
@@ -44,8 +75,6 @@ export default class Tiempo extends Component {
 		this.setState({ t: this.updateClock() });
 	}
 
-
-
 	render() {
 		return (
 			<h3 id="tiempo" style={{
@@ -54,4 +83,5 @@ export default class Tiempo extends Component {
 			}}></h3>
 		)
 	}
-}
+
+} export default withRouter(Tiempo)

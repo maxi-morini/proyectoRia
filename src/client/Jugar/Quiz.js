@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 export default class Quiz extends Component {
+	
+	constructor(props) {
+		super(props);
+	};
+
 	render() {
 		return (
 			<div className="contenedor" style={{ width: "100%", height: "100%" }}>

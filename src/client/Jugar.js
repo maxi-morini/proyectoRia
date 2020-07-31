@@ -24,7 +24,12 @@ class Jugar extends Component {
 	}
 
 	onClick = (e) => {
-		this.props.history.push(`/iniciar:${this.state.juego.Nombre}`)
+		//this.props.history.push(`/iniciar:${this.state.juego.Nombre}`)
+
+		this.props.history.push({
+			pathname: '/iniciar',
+			state: { juego: this.state.juego }
+		})
 	}
 
 	elegido = (juego) => {

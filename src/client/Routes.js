@@ -23,7 +23,8 @@ const Routes = () => {
 			<Route exact path="/crear/resumen" component={GameCreationSummary} />
 			<Route exact path="/registrar" component={LogInRegistro} />
 			<Route path="/panel:usr" component={Panel} />
-			<Route path="/iniciar:nombre" component={Iniciar} />
+			{/*<Route path="/iniciar:nombre" component={Iniciar} />*/}
+			<Route path="/iniciar" component={Iniciar} />
 			<Route path="/iniciado:name:juego" component={Iniciado} />
 			<Route path="/puntaje" component={PuntuacionTotal} />
 			<Route path="/puntuacionparcial" component={PuntuacionParcial} />

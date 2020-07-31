@@ -16,7 +16,7 @@ export default class Seleccion extends Component {
 	render() {
 		const { juego } = this.props;
 		const { elegidoActual } = this.props;
-		console.log(this.props);
+
 		let elegirxSeleccionOption = "button elegirxSeleccionOption ";
 		if(juego.Nombre === elegidoActual){
 			elegirxSeleccionOption += "selected";

@@ -10,10 +10,15 @@ class Iniciar extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			juego: '',
+			juego: this.props.history.location.state.juego,
 			name: '',
 			totalTime: 5
 		}
+
+		/*this.state = {
+			juego: this.props.history.location.state.juego
+		};*/
+
 	};
 
 
@@ -22,7 +27,14 @@ class Iniciar extends Component {
 		if (this.state.totalTime == 0) {
 			//const concat = this.state.name.concat(":",this.state.juego.Nombre);
 			// this.props.history.push(`/iniciado:${this.state.name}:${this.state.juego.Nombre}`)
-			this.props.history.push(`/iniciado:${this.state.name}:${this.state.juego.Nombre}`);
+			
+			//this.props.history.push(`/iniciado:${this.state.name}:${this.state.juego.Nombre}`);
+
+			this.props.history.push({
+				pathname: `/iniciado:${this.state.name}`,
+				state: { juego: this.state.juego } // si.. quedo pasamano
+			})
+
 		} else {
 			const aux = this.state.totalTime - 1;
 			this.setState({ totalTime: aux })
@@ -30,20 +42,36 @@ class Iniciar extends Component {
 		}
 	}
 
-	async componentDidMount() {
-		const { nombre } = this.props.match.params;
+	//async componentDidMount() {
+	componentDidMount() {
+		/*
+		//const { nombre } = this.props.match.params;
+		let nombre  = "SoyUnJuego"; // test
+
 		const url = "/api/juegos";
-		const response = await fetch(url);
-		const data = await response.json();
-		const nom = nombre.substring(1);
-		this.setState({ juego: data.filter(juego => juego.Nombre == nom)[0] });
+		const response = fetch(url);
+		let data = response.json();
+		data = data.filter(juego => juego.Nombre == nombre);
+		data = data[0];
+		//console.log(data);
+
+		//const nom = nombre.substring(1);
+		//this.setState({ juego: data.filter(juego => juego.Nombre == nom)[0] });
+		this.setState({ juego: data });
+		//console.log(data);
+*/
 	}
+
 	onChange = e => {
 		this.setState({
 			[e.target.name]: e.target.value
 		});
 	}
+
 	render() {
+		//console.log(this.state); //test
+		//console.log(this.props);
+
 		return (
 			<Fragment>
 				<div className="columna" style={{ height: "100vh" }}>
@@ -54,8 +82,16 @@ class Iniciar extends Component {
 
 							<p>{this.state.juego.Descripcion}</p>
 						</div>
-						<div style={{ heigth: "100", border: "1px solid black", width: "33%", display: "flex", flexFlow: "row wrap", justifyContent: "flex-end", alignContent: "stretch" }}>Portada</div>
-						{/* {this.state.juego.Portada} */}
+						<div style={{ heigth: "100", border: "1px solid black", width: "33%", display: "flex", flexFlow: "row wrap", justifyContent: "flex-end", alignContent: "stretch" }}>
+							Portada
+							{/*
+							{this.state.juego.Portada} questionCover en realidad es cover del juego
+							*/}
+							<img className="questionCover" src={this.state.juego.settings.coverImage} alt="" />
+
+						</div>
+
+
 					</div>
 					<input style={{ width: "80%", textAlign: "left" }} type="text" name="name" onChange={this.onChange} value={this.state.name}
 						placeholder="Nombre" />
