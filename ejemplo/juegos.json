@@ -45,7 +45,7 @@
 		"preguntasArr": [
 		  {
 			"selectedAnswers": "truefalse",
-			"tiempo": "12",
+			"tiempo": "6",
 			"pregunta": "Funcionaria la harina como talco?",
 			"posibleAnswers": {
 			  "correctAnswer": "true"
