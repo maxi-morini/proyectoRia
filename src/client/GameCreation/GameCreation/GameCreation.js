@@ -119,7 +119,13 @@ class GameCreation extends React.Component {
 		*/
 		this.state = {
 			nombreJuego: "",
-			gameSettings: {},
+			gameSettings: {
+				descripcion: "",
+				privacidad: false,
+				password: "",
+				coverImage: "",
+				musica: ""
+			},
 			gameSettingsShow: false,
 			questionCreationShow: false,
 			preguntas: new Array()

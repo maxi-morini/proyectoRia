@@ -216,13 +216,14 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 	btnCancel(event) {
 		// 		:(
 
-		this.setState(prevState => ({
+		/*this.setState(prevState => ({
 			videoDataYT: {
 				...prevState.videoDataYT
 			},
 			playingVideo: false
-		}))
+		}))*/
 
+		this.btnRemover();
 		this.props.onSelectVideo("");
 	}
 
@@ -237,6 +238,7 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 		}))
 
 		this.props.onSelectVideo(this.state.videoDataYT);
+		this.btnRemover();
 	}
 
 	render() {

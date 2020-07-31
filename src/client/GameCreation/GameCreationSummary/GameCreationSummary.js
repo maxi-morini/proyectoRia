@@ -2,6 +2,7 @@ import React from 'react';
 import QuestionThumbnailSlot from "../../QuestionThumbnail/QuestionThumbnailSlot.js"
 import './GameCreationSummary.css';
 
+/*
 const testPropsJuego =
 {
 	"key": 0,
@@ -96,7 +97,7 @@ const testPropsJuego =
 	],
 	"directLink": "LruyZyIxqrGkqiht6eSbqYOXQU0uhJVX88k"
 }
-
+*/
 class GameCreationSummary extends React.Component {
 
 	constructor(props) {
@@ -136,7 +137,7 @@ class GameCreationSummary extends React.Component {
 
 	gameEnable() {
 		const url = "/api/juegos";
-		const data = { juego: this.state.juego };
+		const data = this.state.juego;
 
 		fetch(url, {
 			method: 'POST',
@@ -147,8 +148,15 @@ class GameCreationSummary extends React.Component {
 		}).then(res => res.json())
 			.catch(error => console.error('gameEnable: Error:', error))
 			.then(response => console.log('gameEnable: Success:', response))
-			;
+		;
 
+		/*this.props.history.push({
+			pathname: '/crear/resumen',
+			state: { juego: juego2 }
+		})*/
+		this.props.history.push({
+			pathname: '/jugar'
+		})
 
 	}
 

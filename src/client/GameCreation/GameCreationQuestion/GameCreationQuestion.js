@@ -54,9 +54,12 @@ class GameCreationQuestion extends React.Component {
 				},
 				selectedVideo: {
 					videoID: "",
+					videoLink: "",
 					videoPrettyLink: "",
 					videoStart: "",
-					videoEnd: ""
+					videoEnd: "",
+					videoThumbnailBig: "",
+					videoThumbnailSmall: ""
 				},
 				puntos: "",
 				key: 0
@@ -96,6 +99,20 @@ class GameCreationQuestion extends React.Component {
 
 	agregarPregunta() {
 		this.props.childFatherConn(this.state.question);
+		this.setState(prevState => ({
+			question: {
+				...prevState.question,
+				selectedVideo: {
+					videoID: "",
+					videoLink: "",
+					videoPrettyLink: "",
+					videoStart: "",
+					videoEnd: "",
+					videoThumbnailBig: "",
+					videoThumbnailSmall: ""
+				}
+			}
+		}))
 	}
 
 	showModal = () => {
@@ -157,12 +174,30 @@ class GameCreationQuestion extends React.Component {
 	};
 
 	handleVideoLink = (videoData) => {
-		this.setState(prevState => ({
-			question: {
-				...prevState.question,
-				selectedVideo: videoData
-			}
-		}))
+		if (videoData === "") {
+			this.setState(prevState => ({
+				question: {
+					...prevState.question,
+					selectedVideo: {
+						videoID: "",
+						videoLink: "",
+						videoPrettyLink: "",
+						videoStart: "",
+						videoEnd: "",
+						videoThumbnailBig: "",
+						videoThumbnailSmall: ""
+					}
+				}
+			}))
+		} else {
+			this.setState(prevState => ({
+				question: {
+					...prevState.question,
+					selectedVideo: videoData
+				}
+			}))
+		}
+
 		this.hideModal();
 	}
 
