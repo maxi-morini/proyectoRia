@@ -59,7 +59,7 @@ class Preguntas extends Component {
 
 	QuizORTF = () => {
 		if (this.state.pregunta.selectedAnswers === "quiz") {
-			return <Quiz childFatherConn={this.callBackQuestionResponseQuizORTF} />
+			return <Quiz childFatherConn={this.callBackQuestionResponseQuizORTF} posibleAnswers={this.state.juego.preguntasArr[this.state.currentQuestion].posibleAnswers} />
 		} else {
 			return <TrueOrFalse childFatherConn={this.callBackQuestionResponseQuizORTF} />
 		}
@@ -89,8 +89,8 @@ class Preguntas extends Component {
 			masPreguntas = true;
 		}
 
-		console.log(this.state.juego.Preguntas);
-		
+		//console.log(this.state.juego.Preguntas);
+
 		this.props.history.push({
 			pathname: '/puntuacionparcial',
 			gameplay: {
@@ -119,10 +119,13 @@ class Preguntas extends Component {
 	}
 
 	stop = () => {
-		// aqui es llamado cuando el timer llega a 0
+		//
+		this.setState({ stop: true });
 		this.callBackQuestionResponseQuizORTF(""); // ???
 		//this.setState({ stop: true });
 		//this.props.history.push(`/puntaje:${this.state.juego.Nombre}`)
+		//childFatherConn={this.callBackQuestionResponseQuizORTF}
+		// {/*stop={this.stop}*/} 
 	}
 
 	render() {
@@ -135,16 +138,18 @@ class Preguntas extends Component {
 				<div className="contenedor" style={{ display: "flex", flexFlow: "row wrap", justifyContent: "center", width: "100%", height: "100%" }}>
 					<h3>{this.state.pregunta.pregunta}</h3>
 				</div>
-				<div className="contenedor" style={{ display: "flex", flexFlow: "row wrap", justifyContent: "center", width: "100%", height: "25%" }}>
-					<ReactPlayer url={this.state.pregunta.selectedVideo.videoPrettyLink} playing={this.state.playing} />
+				<div className="contenedor" style={{ display: "flex", flexFlow: "row wrap", justifyContent: "center", width: "100%", height: "100%" }}>
+					<ReactPlayer url={this.state.pregunta.selectedVideo.videoPrettyLink} playing={this.state.playingVideo} />
 				</div>
 				<div className="contenedor" style={{ flexFlow: "row wrap", width: "100%", height: "100%"}}>
 					<this.QuizORTF />
 				</div>
 				<div className="contenedor" style={{ flexFlow: "row wrap", width: "100%", height: "100%" }}>
-					<Tiempo time={this.state.pregunta.tiempo} stop={this.state.stop} />
+
+					<Tiempo time={this.state.pregunta.tiempo} stop={this.state.stop} childFatherConn={this.callBackQuestionResponseQuizORTF} />
+					
 					<div style={{ width: "25%", height: "100%" }}>
-						<BtnSiguiente stop={this.stop} />
+						<BtnSiguiente  childFatherConn={this.callBackQuestionResponseQuizORTF} />
 					</div>
 				</div>
 				</div>

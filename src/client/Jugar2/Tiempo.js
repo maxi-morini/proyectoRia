@@ -28,6 +28,7 @@ class Tiempo extends Component {
 		if (document.getElementById('tiempo') != null) {
 			document.getElementById('tiempo').innerHTML = this.state.tiempo;
 			if (this.state.tiempo == 0) {
+				this.props.childFatherConn("");
 				//console.log(this.state.tiempo);
 
 				/*
@@ -46,7 +47,8 @@ class Tiempo extends Component {
 					onClick={this.props.stop}>Siguiente</Link>
 			</Fragment>
 
-				
+				*/
+				/*
 				this.props.history.push({
 					pathname: `/puntuacionparcial`, // si.. quedo pasamano
 					isQuiz: { isQuiz: true, },
