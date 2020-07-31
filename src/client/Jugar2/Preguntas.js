@@ -130,13 +130,15 @@ class Preguntas extends Component {
 
 		return (
 			<Fragment>
+				{/* style={{position:"absolute",zIndex:"1",alignContent:"center"}} */}
+				<div className="columna" >
 				<div className="contenedor" style={{ display: "flex", flexFlow: "row wrap", justifyContent: "center", width: "100%", height: "100%" }}>
 					<h3>{this.state.pregunta.pregunta}</h3>
 				</div>
-				<div className="contenedor" style={{ display: "flex", flexFlow: "row wrap", justifyContent: "center", width: "100%", height: "100%" }}>
+				<div className="contenedor" style={{ display: "flex", flexFlow: "row wrap", justifyContent: "center", width: "100%", height: "25%" }}>
 					<ReactPlayer url={this.state.pregunta.selectedVideo.videoPrettyLink} playing={this.state.playing} />
 				</div>
-				<div className="contenedor" style={{ flexFlow: "row wrap", width: "100%", height: "100%" }}>
+				<div className="contenedor" style={{ flexFlow: "row wrap", width: "100%", height: "100%"}}>
 					<this.QuizORTF />
 				</div>
 				<div className="contenedor" style={{ flexFlow: "row wrap", width: "100%", height: "100%" }}>
@@ -144,6 +146,7 @@ class Preguntas extends Component {
 					<div style={{ width: "25%", height: "100%" }}>
 						<BtnSiguiente stop={this.stop} />
 					</div>
+				</div>
 				</div>
 			</Fragment>
 		)

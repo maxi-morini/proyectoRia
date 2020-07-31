@@ -68,9 +68,11 @@ export default class Iniciado extends Component {
 		if (this.state.gameplay.juego.Preguntas === 0) {
 			someJSX = (
 				<Fragment>
+					<div style={{height:"100vh"}}>
 					<Titulo text={"GameQuiz"} />
 					<div style={{ height: "25vh" }}>
 						<h3>El juego no contiene preguntas.</h3>
+					</div>
 					</div>
 				</Fragment>
 			);
@@ -79,6 +81,7 @@ export default class Iniciado extends Component {
 
 		someJSX = (
 			<Fragment>
+				<div style={{height:"100vh"}}>
 				<Titulo text={"GameQuiz"} />
 				<div style={{ height: "25vh" }}>
 					<Preguntas
@@ -96,6 +99,7 @@ export default class Iniciado extends Component {
 					<PuntuacionTotal nombre={this.state.juego.Nombre}/> 
 					<PuntuacionParcial isQuiz={false} respuestas={this.state.respuestas }/>
 				*/}
+				</div>
 			</Fragment>
 		);
 

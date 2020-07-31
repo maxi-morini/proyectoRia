@@ -46,7 +46,7 @@ class Tiempo extends Component {
 					onClick={this.props.stop}>Siguiente</Link>
 			</Fragment>
 
-				*/
+				
 				this.props.history.push({
 					pathname: `/puntuacionparcial`, // si.. quedo pasamano
 					isQuiz: { isQuiz: true, },
@@ -55,7 +55,7 @@ class Tiempo extends Component {
 					puntaje: { vale: "100 pts." },
 					correcta: { correcta: "A" },
 					maspreguntas: { maspreguntas: false }
-				})
+				})*/
 
 
 			} else if (this.props.stop && this.state.una == 0) {
