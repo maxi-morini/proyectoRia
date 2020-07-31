@@ -18,16 +18,16 @@ const defaultState = []; // Este es un array de juegos creados.
 
 function reducer(state = defaultState, { /* action */ type, payload }) {
 
-    console.log(type);
-    //console.log(gameCreationSaveType);
+	console.log(type);
+	//console.log(gameCreationSaveType);
 
-    switch (type) {
+	switch (type) {
 
-        case gameCreationSaveType: {
-            //console.log(payload);
-            if (!payload) {
-                return null;
-            }else{
+		case gameCreationSaveType: {
+			//console.log(payload);
+			if (!payload) {
+				return null;
+			} else {
                 /*return { 
                     ...state,
                     arr: [...state.arr, action.newItem]
@@ -42,18 +42,18 @@ function reducer(state = defaultState, { /* action */ type, payload }) {
 				}*/
 				state.push(payload);
 				return state;
-				
-                //defaultState.push(payload);
-            }
 
-            //return items.find(n => n.id === payload);
-        }
-        case gameCreationGetAll: {
-            return state;
-        }
-        default:
-            return state;
-    }
+				//defaultState.push(payload);
+			}
+
+			//return items.find(n => n.id === payload);
+		}
+		case gameCreationGetAll: {
+			return state;
+		}
+		default:
+			return state;
+	}
 }
 
 /*

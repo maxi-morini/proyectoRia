@@ -17,12 +17,12 @@ const defaultState = []; // Este es un array de juegos creados.
 
 function reducer(state = defaultState, { /* action */ type, payload }) {
 
-    switch (type) {
+	switch (type) {
 
-        case questionVideoAdd: {
-            if (!payload) {
-                return null;
-            }else{
+		case questionVideoAdd: {
+			if (!payload) {
+				return null;
+			} else {
                 /*return { 
                     ...state,
                     arr: [...state.arr, action.newItem]
@@ -32,15 +32,15 @@ function reducer(state = defaultState, { /* action */ type, payload }) {
                     arr: [...state.arr, payload]
 				}*/
 				state.push(payload)
-                //defaultState.push(payload);
-            }
+				//defaultState.push(payload);
+			}
 
-            //return items.find(n => n.id === payload);
-        }
+			//return items.find(n => n.id === payload);
+		}
 
-        default:
-            return state;
-    }
+		default:
+			return state;
+	}
 }
 
 

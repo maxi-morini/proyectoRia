@@ -2,37 +2,35 @@
 	GameCreationSettings.css
 */
 
-.gameCreationSettingsConf{
+.gameCreationSettingsConf {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-
 }
 
-.gameCreationSettingsConfRadios{
+.gameCreationSettingsConfRadios {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-
 }
 
-.gameCreationSettingsConfRadio{
+.gameCreationSettingsConfRadio {
 	display: flex;
-
 }
 
-#password{
+#password {
 	display: flex;
 	width: 100%;
 }
-.gameCreationSettingsIMG{
+
+.gameCreationSettingsIMG {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	width: 100%;
 }
 
-.gameCreationSettingsAudio{
+.gameCreationSettingsAudio {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -40,11 +38,11 @@
 	width: 100%;
 }
 
-#imgURL{
+#imgURL {
 	width: 100%;
 }
 
-#imgURLdisplay{
+#imgURLdisplay {
 	width: 100%;
 	/*min-width: 150px;*/
 }

@@ -1,6 +1,7 @@
 /*
 	QuestionThumbnailSlot.css
 */
+
 :root {
 	--thumbnailWidth: 120px;
 	--thumbnailHeight: 90px;
@@ -25,7 +26,8 @@
 	flex-direction: column;
 	justify-content: space-between;
 	width: calc(100% - var(--thumbnailWidth) - 0.5rem);
-	min-width: calc( var(--thumbnailWidth) * 2); /* ref en media query */
+	min-width: calc( var(--thumbnailWidth) * 2);
+	/* ref en media query */
 }
 
 .nonImage {
@@ -34,12 +36,15 @@
 }
 
 /*questionThumbnailSlotText*/
+
 /*.questionThumbnailSlotIndexAndAns {}*/
 
 /*questionThumbnailSlotText*/
+
 /*.questionThumbnailSlotQuestion {}*/
 
 /*questionThumbnailSlotText*/
+
 /*.questionThumbnailSlotTime {}*/
 
 .questionThumbnailSlotImage {
@@ -49,6 +54,7 @@
 }
 
 /*questionThumbnailSlotImage*/
+
 .questionThumbnailSlotImageSmol {
 	width: var(--thumbnailWidth);
 	height: var(--thumbnailHeight);

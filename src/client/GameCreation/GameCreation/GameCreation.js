@@ -203,7 +203,7 @@ class GameCreation extends React.Component {
 		payload.key = this.state.preguntas.length + 1;
 		//this.state.preguntas.push(payload);
 		this.state.preguntas.unshift(payload);
-		
+
 		this.questionCreationHide();
 
 		/*

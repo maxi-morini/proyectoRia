@@ -1,38 +1,38 @@
 [
-    {
-        "juego": "AnimalesQuiz",
-        "nombre":"Jose Medina",        
-        "puntaje": 6000,
-        "lugar": 1
-    },
-    {
-        "juego":"AnimalesQuiz",
-        "nombre":"Paco Gonzalez",
-        "puntaje": 5400,
-        "lugar":2
-    },
-    {
-        "juego":"AnimalesQuiz",
-        "nombre":"Franky",
-        "puntaje":300,
-        "lugar":3
-    },
-    {
-        "juego":"AnimalesQuiz",
-        "nombre": "Otro1",
-        "puntaje": 250,
-        "lugar": 4
-    },
-    {
-        "juego":"AnimalesQuiz",
-        "nombre": "Otro2",
-        "puntaje": 100,
-        "lugar": 5
-    },
-    {
-        "juego": "PoliticsQuiz",
-        "nombre":"Franky",
-        "puntaje":300,
-        "lugar": 1
-    }
+	{
+		"juego": "AnimalesQuiz",
+		"nombre": "Jose Medina",
+		"puntaje": 6000,
+		"lugar": 1
+	},
+	{
+		"juego": "AnimalesQuiz",
+		"nombre": "Paco Gonzalez",
+		"puntaje": 5400,
+		"lugar": 2
+	},
+	{
+		"juego": "AnimalesQuiz",
+		"nombre": "Franky",
+		"puntaje": 300,
+		"lugar": 3
+	},
+	{
+		"juego": "AnimalesQuiz",
+		"nombre": "Otro1",
+		"puntaje": 250,
+		"lugar": 4
+	},
+	{
+		"juego": "AnimalesQuiz",
+		"nombre": "Otro2",
+		"puntaje": 100,
+		"lugar": 5
+	},
+	{
+		"juego": "PoliticsQuiz",
+		"nombre": "Franky",
+		"puntaje": 300,
+		"lugar": 1
+	}
 ]

@@ -15,8 +15,8 @@ import gameCreationReducer from './reducers/GameCreationReducer';
 // import currentItem from './reducers/currentItem';
 
 const rootReducer = combineReducers({
-    questionCreation: questionCreationReducer,
-    gameCreationCache: gameCreationReducer
+	questionCreation: questionCreationReducer,
+	gameCreationCache: gameCreationReducer
     /*
     potato: potatoReducer,
     tomato: tomatoReducer,

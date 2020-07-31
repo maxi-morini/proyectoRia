@@ -52,28 +52,28 @@ class QuestionThumbnailSquare extends React.Component {
 	}
 
 	render() {
-		
+
 		//let varIndex = this.props.index;
 		//let varQuestion = this.props.question;
 		//console.log(varQuestion);
 		//console.log(varQuestion.selectedVideo);
-/*
-		let varIndex = 0;
-		let varQuestion = testPropsQuestion;
-*/
+		/*
+				let varIndex = 0;
+				let varQuestion = testPropsQuestion;
+		*/
 
 		let someJSX = (
 			<div className='questionThumbnailSquare' >
 
-					<div >
-						<div className="questionThumbnailSquareImage" >
-							<img className="questionThumbnailSquareImage" src={"https://img.youtube.com/vi/" + this.props.question.selectedVideo.videoID + "/0.jpg"} alt="" />
-						</div>
-						<div className="questionThumbnailSquareFoot" >
-							<span className="questionThumbnailSquareText" >{this.props.question.tiempo}s</span>
-							<span className="questionThumbnailSquareText" >{this.props.question.selectedAnswers}</span>
-						</div>
+				<div >
+					<div className="questionThumbnailSquareImage" >
+						<img className="questionThumbnailSquareImage" src={"https://img.youtube.com/vi/" + this.props.question.selectedVideo.videoID + "/0.jpg"} alt="" />
 					</div>
+					<div className="questionThumbnailSquareFoot" >
+						<span className="questionThumbnailSquareText" >{this.props.question.tiempo}s</span>
+						<span className="questionThumbnailSquareText" >{this.props.question.selectedAnswers}</span>
+					</div>
+				</div>
 			</div>
 		);
 

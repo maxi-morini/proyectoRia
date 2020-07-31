@@ -1,19 +1,19 @@
 export const questionSave = (text) => {
 	return {
-                type: "QUESTION_SAVE",
-                payload: text,
+		type: "QUESTION_SAVE",
+		payload: text,
 	};
 };
 export const questionVideoAdd = (text) => {
 	return {
-                type: "QUESTION_VIDEOURL_ADD",
-                payload: text,
+		type: "QUESTION_VIDEOURL_ADD",
+		payload: text,
 	};
 };
 export const questionVideoRemove = (text) => {
 	return {
-                type: "QUESTION_VIDEOURL_REMOVE",
-                payload: text,
+		type: "QUESTION_VIDEOURL_REMOVE",
+		payload: text,
 	};
 };
 
@@ -28,7 +28,7 @@ export default questionVideoAdd;
 /*
 export const logOff = () => {
 	return {
-		type: 'LOG_OFF'	
+		type: 'LOG_OFF'
 	};
 };
 */

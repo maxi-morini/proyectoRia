@@ -146,7 +146,7 @@ class GameCreationSettings extends React.Component {
 				<div className="areaRight" >
 					<div className="gameCreationSettingsIMG"  >
 						<label htmlFor="imgURL" >URL a la Imagen</label>
-						<input type="text" id="imgURL" name="coverImage" onChange={this.onChange} value={this.state.settings.coverImage}/>
+						<input type="text" id="imgURL" name="coverImage" onChange={this.onChange} value={this.state.settings.coverImage} />
 						<img id="imgURLdisplay" src={this.state.settings.coverImage} />
 					</div>
 					<div className="gameCreationSettingsAudio" >

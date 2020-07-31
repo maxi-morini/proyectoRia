@@ -122,7 +122,7 @@ class GameCreationSummary extends React.Component {
 			directLink: "LruyZyIxqrGkqiht6eSbqYOXQU0uhJVX88k"
 		}*/
 		this.componentDidMount = this.componentDidMount.bind(this);
-		
+
 		//console.log(this.state);
 		//console.log(this.props.history.location.state.juego);
 		//this.state.juego = testPropsJuego;
@@ -146,7 +146,10 @@ class GameCreationSummary extends React.Component {
 			}
 		}).then(res => res.json())
 			.catch(error => console.error('gameEnable: Error:', error))
-			.then(response => console.log('gameEnable: Success:', response));
+			.then(response => console.log('gameEnable: Success:', response))
+			;
+
+
 	}
 
 	render() {

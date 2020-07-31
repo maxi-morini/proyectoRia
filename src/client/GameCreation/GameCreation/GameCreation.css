@@ -43,6 +43,7 @@ QuestionThumbnailSquare, gameCreationMarginTop, gameCreationLeftPanelListNew, ga
 	overflow-y: auto;
 	max-height: 50vh;
 }
+
 /*
 .gameCreationSpanSubtitle{
 	display: block;
@@ -65,10 +66,10 @@ QuestionThumbnailSquare, gameCreationMarginTop, gameCreationLeftPanelListNew, ga
 
 /*.gameCreationNewQuestionButton {}*/
 
-
 /*
 	Right Area: 
 */
+
 .gameCreationRightPanelContainer {
 	width: 66vw;
 	/*min-width: 70em;*/
@@ -92,4 +93,3 @@ QuestionThumbnailSquare, gameCreationMarginTop, gameCreationLeftPanelListNew, ga
 /*.gameCreationSettingsContainer {}*/
 
 /*.gameCreationModalSection {}*/
-

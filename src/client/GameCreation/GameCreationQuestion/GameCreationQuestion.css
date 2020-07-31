@@ -42,10 +42,10 @@
 }
 
 /*.gameCreationQuestionLeftTop{}*/
-.gameCreationSettingsContainer{
+
+.gameCreationSettingsContainer {
 	resize: both;
 }
-
 
 .gameCreationQuestionLeftTopItem {
 	text-align: left;
@@ -110,7 +110,6 @@ input.gameCreationQuestionLeftBottom {
 	/*min-width: 8em;*/
 	/*min-height: 8em;*/
 	max-height: 30%;
-
 }
 
 .rightQuestionRightImagenNo {

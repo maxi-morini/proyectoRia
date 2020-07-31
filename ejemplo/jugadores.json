@@ -1,8 +1,14 @@
 [
-    {
-        "user":"Martin Aranda",
-        "pass":"123",
-        "logiName":"MAranda1",
-        "fnac":"14/03/2020"
-    }
+	{
+		"user": "Martin Aranda",
+		"pass": "123",
+		"logiName": "MAranda1",
+		"fnac": "14/03/2020"
+	},
+	{
+		"user": "1234",
+		"pass": "1234",
+		"logiName": "1234",
+		"fnac": "14/03/20016"
+	}
 ]

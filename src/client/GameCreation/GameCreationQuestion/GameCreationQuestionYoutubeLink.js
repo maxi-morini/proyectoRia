@@ -87,7 +87,7 @@ class GameCreationQuestionYoutubeLink extends React.Component {
 				videoThumbnailBig: "",
 				videoThumbnailSmall: ""
 			},
-			playingVideo : false
+			playingVideo: false
 		});
 	}
 
