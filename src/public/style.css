@@ -148,6 +148,17 @@ tr:nth-child(even) {
 #canvas {
 	width: 75%;
 }
+.elegirxSeleccionOption{
+	border: 1px solid black;
+}
+.elegirxSeleccionOption.selected{
+	/*background-color: lightsalmon;*/
+	background-color: red;
+}
+.elegirxSeleccionOption .selectedNot{
+	background-color: white;
+}
+
 
 @media screen and (max-width:700px) {
 	/* td:nth-child(4), td:nth-child(5) , td:nth-child(3), th:nth-child(4), th:nth-child(5) , th:nth-child(3){

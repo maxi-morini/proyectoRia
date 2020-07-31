@@ -13,6 +13,7 @@ class Jugar extends Component {
 		this.state = {
 			"juego": '',
 			"juegos": [],
+			elegidoActual: ""
 		};
 	};
 	async componentDidMount() {
@@ -27,7 +28,10 @@ class Jugar extends Component {
 	}
 
 	elegido = (juego) => {
-		this.setState({ juego: juego })
+		this.setState({
+				juego: juego,
+				elegidoActual: juego.Nombre
+		});
 	}
 
 	render() {
@@ -37,7 +41,7 @@ class Jugar extends Component {
 					<Titulo text={this.props.text} />
 
 					<ElegirxCodigo juegos={this.state.juegos} />
-					<ElegirxSeleccion juegos={this.state.juegos} elegido={this.elegido} />
+					<ElegirxSeleccion juegos={this.state.juegos} elegido={this.elegido} elegidoActual={this.state.elegidoActual}/>
 					<button className="button bloque-auto" style={{ border: "2px solid black", width: "33%", alignSelf: "flex-end" }} onClick={this.onClick}>Iniciar</button>
 				</div>
 			</Fragment>
