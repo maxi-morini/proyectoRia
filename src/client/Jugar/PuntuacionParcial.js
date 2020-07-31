@@ -38,7 +38,9 @@ export default class PuntuacionParcial extends Component {
 			<Fragment>
 				<div style={{ height: "90vh" }}>
 					<Titulo text={"GameQuiz"} />
+					<div style={{ height: "25vh" }}>
 					<Titulo text={"Pregunta " + this.props.location.pregunta.numero} />
+					</div>
 					<h1>{this.props.location.puntaje.vale}</h1>
 					<div className="contenedor" style={{ flexFlow: "row wrap", width: "70%", height: "50%" }}>
 						<this.QuizORTF />
