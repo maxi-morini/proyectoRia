@@ -120,7 +120,7 @@ export default class PuntuacionParcial extends Component {
 					</div>
 
 					<div id="link">
-						<button className="" onClick={this.onClickSiguiente}>Siguiente</button>
+						<button className="button bloque" style={{ border: "2px solid black", height: "25%", fontSize: "3vw" }} onClick={this.onClickSiguiente}>Siguiente</button>
 						{/*
 						<Link to={{
 

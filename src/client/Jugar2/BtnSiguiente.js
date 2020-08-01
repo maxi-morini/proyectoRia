@@ -29,7 +29,7 @@ export default class BtnSiguiente extends Component {
 						id="boton" className="button bloque" style={{ border: "2px solid black", height: "25%", fontSize: "3vw" }}
 						onClick={this.props.stop}>Siguiente</Link>
 				}*/}
-					<button className="" onClick={this.onClickSiguiente}>Siguiente</button>
+					<button className="button bloque" style={{ border: "2px solid black", height: "25%", fontSize: "3vw" }} onClick={this.onClickSiguiente}>Siguiente</button>
 			</Fragment>
 		)
 	}
