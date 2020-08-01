@@ -60,7 +60,7 @@ class Iniciar extends Component {
 							<p>{this.state.gameplay.juego.Descripcion}</p>
 						</div>
 						<div style={{ heigth: "100", width: "33%", display: "flex", flexFlow: "row wrap", justifyContent: "flex-end", alignContent: "stretch" }}>
-							<img className="questionCover" src={this.state.gameplay.juego.settings.coverImage} alt="" style={{width: "100%"}} />
+							<img className="questionCover" src={this.state.gameplay.juego.settings.coverImage} alt="" style={{width: "80%"}} />
 						</div>
 
 

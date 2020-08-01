@@ -37,7 +37,7 @@ export default class FormElegir extends Component {
 		return (
 
 			<Fragment>
-				<input style={{ width: "100%" }} type="text"
+				<input style={{ width: "100vw" }} type="text"
 					name="link"
 					value={this.state.seleccionCodigo.link}
 					placeholder="Join game (link)" />

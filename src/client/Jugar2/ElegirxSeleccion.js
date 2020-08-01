@@ -22,7 +22,7 @@ export default class ElegirxSeleccion extends Component {
 		return (
 			<Fragment>
 				<input type="text" style={{ width: "40%", alignSelf: "flex-start" }} name="filtro" placeholder="Filtro" onChange={this.filtro} value={this.state.filtro} />
-				<div style={{display: "flex", flexFlow: "row no-wrap", overflow: "auto"}}>
+				<div style={{display: "flex", flexFlow: "row wrap", overflowX:"scroll"}}>
 					{
 						juegos.filter(
 								juego => juego.Nombre.includes(this.state.filtro)

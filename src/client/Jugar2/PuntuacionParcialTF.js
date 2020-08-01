@@ -10,7 +10,9 @@ export default class PuntuacionParcialTF extends Component {
 	componentDidMount() {
 		
 		//console.log(this.props);
-
+		console.log(this.props.correcta);
+		
+		
 		const canvas = this.canvasRef.current;
 		const ctx = canvas.getContext('2d');
 		const w = canvas.width;

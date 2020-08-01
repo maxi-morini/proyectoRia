@@ -15,6 +15,7 @@ export default class PuntuacionParcial extends Component {
 			questionCant: this.props.history.location.gameplay.questionCant,
 			sumatoriaPuntos: this.props.history.location.gameplay.sumatoriaPuntos,
 			jugador: this.props.history.location.gameplay.jugador, // solo string con el nombre
+			correcta:'',
 		};
 
 		this.onClickSiguiente = this.onClickSiguiente.bind(this);
@@ -24,9 +25,9 @@ export default class PuntuacionParcial extends Component {
 		const isQuiz = this.props.location.isQuiz.isQuiz;
 		//console.log(this.props.history.location.respuestas);
 		if (isQuiz === true) {
-			return <PuntuacionParcialQuiz respuestas={this.props.history.location.respuestas.respuestas} />
+			return <PuntuacionParcialQuiz respuestas={this.props.history.location.respuestas.respuestas} correcta={this.state.correcta}/>
 		} else {
-			return <PuntuacionParcialTF respuestas={this.props.history.location.respuestas.respuestas} />
+			return <PuntuacionParcialTF respuestas={this.props.history.location.respuestas.respuestas} correcta={this.state.correcta}/>
 		}
 	}
 
@@ -107,7 +108,6 @@ export default class PuntuacionParcial extends Component {
 		if(this.props.location.isQuiz.isQuiz){
 			correcta = correcta.slice(-1);
 		}
-
 		return (
 			<Fragment>
 				<div style={{ height: "100vh" }}>
@@ -116,7 +116,7 @@ export default class PuntuacionParcial extends Component {
 					<h3>Puntos: {this.props.history.location.gameplay.juego.preguntasArr[this.props.history.location.gameplay.currentQuestion].puntos}</h3>
 					<h3>Correcta: {correcta}</h3>
 					<div className="contenedor" style={{ flexFlow: "row wrap", width: "90%", height: "50%" }}>
-						<this.QuizORTF />
+						<this.QuizORTF/>
 					</div>
 
 					<div id="link">
