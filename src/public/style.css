@@ -146,8 +146,15 @@ tr:nth-child(even) {
 }
 
 #canvas {
-	width: 75%;
+	width: 40%;
 }
+.contenedorCanvas {
+	display: flex;
+	justify-content: center;
+	align-items: space-around;
+}
+
+
 .elegirxSeleccionOption{
 	border: 1px solid black;
 }

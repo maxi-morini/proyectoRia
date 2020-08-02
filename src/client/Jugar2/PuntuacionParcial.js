@@ -112,10 +112,12 @@ export default class PuntuacionParcial extends Component {
 			<Fragment>
 				<div style={{ height: "100vh" }}>
 					<Titulo text={"GameQuiz"} />
-					<Titulo text={"Pregunta " + (+this.state.currentQuestion + 1)} />
+
+					<h2>{"Pregunta " + (+this.state.currentQuestion + 1)}</h2>
+
 					<h3>Puntos: {this.props.history.location.gameplay.juego.preguntasArr[this.props.history.location.gameplay.currentQuestion].puntos}</h3>
 					<h3>Correcta: {correcta}</h3>
-					<div className="contenedor" style={{ flexFlow: "row wrap", width: "90%", height: "50%" }}>
+					<div className="contenedorCanvas" style={{ flexFlow: "row wrap", width: "100%", height: "40%" }}>
 						<this.QuizORTF/>
 					</div>
 
