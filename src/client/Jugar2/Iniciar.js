@@ -7,6 +7,9 @@ class Iniciar extends Component {
 
 	constructor(props) {
 		super(props);
+
+		//console.log(this.props);
+
 		this.state = {
 			gameplay: {
 				juego: this.props.history.location.state.juego,

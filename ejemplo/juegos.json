@@ -37,8 +37,8 @@
 		"key": 0,
 		"settings": {
 		  "descripcion": "Soy una descripcion",
-		  "privacidad": false,
-		  "password": "",
+		  "privacidad": true,
+		  "password": "qwerty",
 		  "coverImage": "https://www.extremetech.com/wp-content/uploads/2017/01/MOZILLA-LOGO-640x353.jpg",
 		  "musica": "https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Abishai/Memento_Mori/Abishai_-_08_-_Ambient_Piece_4_02-13-2017.mp3"
 		},
@@ -116,7 +116,7 @@
 			"respuestasParciales": [5, 20, 40, 35]
 		  }
 		],
-		"directLink": "3WjzVbUsTzkXxJm5a6LQCDwbUREV3xHg1fq"
+		"directLink": "abc"
 	  }
 	
 

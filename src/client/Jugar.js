@@ -13,7 +13,8 @@ class Jugar extends Component {
 		this.state = {
 			"juego": '',
 			"juegos": [],
-			elegidoActual: ""
+			elegidoActual: "",
+			password: ""
 		};
 	};
 	async componentDidMount() {
@@ -25,17 +26,45 @@ class Jugar extends Component {
 
 	onClick = (e) => {
 		//this.props.history.push(`/iniciar:${this.state.juego.Nombre}`)
+		
+		var ajug = this.state.juego;
+		console.log(ajug, this.state.password)
 
-		this.props.history.push({
-			pathname: '/iniciar',
-			state: { juego: this.state.juego }
-		})
+		if (ajug.settings.privacidad) {
+			if (ajug.settings.password === this.state.password) {
+				if (ajug) {
+					this.props.history.push({
+						pathname: '/iniciar',
+						state: { juego: this.state.juego }
+					})
+				} else {
+					return;
+				}
+			} else {
+				/*
+				const node = document.createElement("h1");
+				const text = document.createTextNode("Pass incorrecto");
+				node.setAttribute("id", "hijo")
+				node.appendChild(text);
+				form.appendChild(node);
+				*/
+			}
+		}else{
+			this.props.history.push({
+				pathname: '/iniciar',
+				state: { juego: this.state.juego }
+			})
+		}
+
+		
 	}
 
-	elegido = (juego) => {
+	elegido = (juego, pass) => {
+		console.log("elegido deasde Jugar", juego, pass)
 		this.setState({
 				juego: juego,
-				elegidoActual: juego.Nombre
+				elegidoActual: juego.Nombre,
+				password: pass
 		});
 	}
 
@@ -45,7 +74,7 @@ class Jugar extends Component {
 				<div className="columna" style={{ width: "100vw", height: "100vh" }}>
 					<Titulo text={this.props.text} />
 
-					<ElegirxCodigo juegos={this.state.juegos} />
+					<ElegirxCodigo juegos={this.state.juegos} elegido={this.elegido} elegidoActual={this.state.elegidoActual} />
 					<ElegirxSeleccion juegos={this.state.juegos} elegido={this.elegido} elegidoActual={this.state.elegidoActual}/>
 					<button className="button bloque-auto" style={{ border: "2px solid black", width: "33%", alignSelf: "flex-end" }} onClick={this.onClick}>Iniciar</button>
 				</div>

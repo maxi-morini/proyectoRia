@@ -72,7 +72,7 @@ export default class PuntuacionParcialTF extends Component {
 		ctx.strokeRect(((3 * w / 5) + (3 * w / 15)), h, w / 5, -alto2);
 		ctx.font = '2vw Comic Sans MS';
 		ctx.fillStyle = 'white';
-		const txt4 = 'C';
+		const txt4 = 'D';
 		const ancho4 = ctx.measureText(txt3).width;
 		const x4 = (3 * w / 5) + (3 * w / 15) + ((w / 5 - ancho3) / 2);
 		ctx.fillText(txt4, x4, h - (alto2 / 2));
